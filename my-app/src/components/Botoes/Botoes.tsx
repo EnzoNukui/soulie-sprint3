@@ -1,6 +1,6 @@
 interface BotaoProps {
   texto: string
-  variante?: 'primario' | 'secundario'
+  variante?: 'primario' | 'secundario' | 'claro'
   tipo?: 'button' | 'submit' | 'reset'
   desabilitado?: boolean
   onClick?: () => void
@@ -11,6 +11,8 @@ const estilos = {
     'bg-violet-600 text-white shadow-sm hover:-translate-y-0.5 hover:bg-violet-700 hover:shadow-md',
   secundario:
     'border border-violet-600 bg-transparent text-violet-600 hover:-translate-y-0.5 hover:bg-violet-50',
+  claro:
+    'bg-white text-violet-700 shadow-md hover:-translate-y-0.5 hover:bg-violet-50 hover:shadow-lg',
 }
 
 export default function Botao({

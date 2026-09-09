@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="flex min-h-screen flex-col bg-violet-50/30 text-zinc-900">
       <Cabecalho />      
-        <Outlet />     
+      <Outlet />     
       <Rodape />
     </div>
   )

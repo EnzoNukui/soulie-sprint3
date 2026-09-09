@@ -1,45 +1,45 @@
-import { createBrowserRouter } from 'react-router-dom'
-import App from '../App'
-import Contato from '../pages/Contato'
-import ErrorPage from '../pages/Error'
-import Faq from '../pages/Faq'
-import Home from '../pages/Home'
-import Integrantes from '../pages/Integrantes'
-import Sobre from '../pages/Sobre'
-import Solucao from '../pages/Solucao'
+import { createBrowserRouter } from "react-router-dom";
+import App from "../App";
+import Contato from "../pages/Contato";
+import Error from "../pages/Error";
+import Faq from "../pages/Faq";
+import Home from "../pages/Home";
+import Integrantes from "../pages/Integrantes";
+import Sobre from "../pages/Sobre";
+import Solucao from "../pages/Solucao";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
+    errorElement: <Error />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
       {
-        path: '/sobre',
+        path: "/sobre",
         element: <Sobre />,
       },
       {
-        path: '/solucao',
+        path: "/solucao",
         element: <Solucao />,
       },
       {
-        path: '/integrantes',
+        path: "/integrantes",
         element: <Integrantes />,
       },
       {
-        path: '/contato',
+        path: "/contato",
         element: <Contato />,
       },
       {
-        path: '/faq',
+        path: "/faq",
         element: <Faq />,
       },
     ],
   },
-])
+]);
 
-export default router
+export default router;

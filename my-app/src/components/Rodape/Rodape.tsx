@@ -11,33 +11,33 @@ const links = [
 
 export default function Rodape() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-violet-950 via-violet-900 to-indigo-950 text-white">
+    <footer className="relative overflow-hidden bg-linear-to-br from-violet-950 via-violet-900 to-indigo-950 text-white">
       <div
         aria-hidden="true"
         className="absolute -left-20 -top-20 h-52 w-52 rounded-full bg-white/5"
       />
 
       <div className="relative mx-auto max-w-7xl px-6 pb-7 pt-12 sm:px-8 lg:px-10 lg:pt-14">
-        <div className="flex flex-col items-center gap-10 lg:flex-row lg:justify-between">
-          <div className="text-center lg:text-left">
+        <div className="grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] items-start gap-6 lg:flex lg:items-center lg:justify-between lg:gap-10">
+          <div className="text-left">
             <Link
               to="/"
-              className="text-4xl font-semibold tracking-tight text-white transition-opacity hover:opacity-85"
+              className="text-3xl font-semibold tracking-tight text-white transition-opacity hover:opacity-85 sm:text-4xl"
             >
               Soulie
             </Link>
-            <p className="mt-3 max-w-64 text-sm leading-6 text-violet-200 sm:text-base">
+            <p className="mt-3 max-w-40 text-xs leading-5 text-violet-200 sm:max-w-52 sm:text-sm lg:max-w-64 lg:text-base lg:leading-6">
               Pequenas ações, impacto que continua.
             </p>
           </div>
 
           <nav aria-label="Navegação do rodapé">
-            <ul className="grid grid-cols-3 gap-x-7 gap-y-5 text-center text-sm text-violet-200 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-8">
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-4 text-left text-sm text-violet-200 sm:gap-x-8 lg:flex lg:flex-wrap lg:justify-end lg:gap-x-8">
               {links.map((link) => (
                 <li key={link.caminho}>
                   <Link
                     to={link.caminho}
-                    className="transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                    className="relative inline-block py-1 transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:bg-violet-400 after:transition-all after:duration-300 hover:text-white hover:after:w-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                   >
                     {link.nome}
                   </Link>
