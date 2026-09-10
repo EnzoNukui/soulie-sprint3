@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import fotoArthur from "../../assets/integrantes/foto_arthur.png";
 import fotoDiego from "../../assets/integrantes/foto_diego.jpeg";
 import fotoEnzo from "../../assets/integrantes/foto_enzo.jpeg";
@@ -69,7 +70,9 @@ const integrantes = [
 ];
 
 export default function Integrantes() {
-  document.title = "Soulie | Integrantes";
+  useEffect(() => {
+    document.title = "Soulie | Integrantes";
+  }, []);
 
   return (
     <main className="overflow-hidden bg-white px-5 py-16 sm:px-8 sm:py-20 lg:py-24">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import avatarDuvida from "../../assets/avatar/avatar_duvida.png";
 import Botao from "../../components/Botoes/Botoes";
@@ -27,7 +27,9 @@ const perguntas = [
 ];
 
 export default function Faq() {
-  document.title = "Soulie | FAQ";
+  useEffect(() => {
+    document.title = "Soulie | FAQ";
+  }, []);
 
   const [perguntaAberta, setPerguntaAberta] = useState<number | null>(null);
   const navigate = useNavigate();

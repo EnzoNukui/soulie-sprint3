@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import Botao from "../../components/Botoes/Botoes";
 
@@ -13,7 +13,9 @@ const campoBase =
   "w-full rounded-xl border bg-violet-50/40 px-4 py-3 text-violet-950 outline-none transition placeholder:text-zinc-400 focus:border-violet-500 focus:bg-white focus:ring-4 focus:ring-violet-100";
 
 export default function Contato() {
-  document.title = "Soulie | Contato";
+  useEffect(() => {
+    document.title = "Soulie | Contato";
+  }, []);
 
   const [mensagemEnviada, setMensagemEnviada] = useState(false);
   const {
