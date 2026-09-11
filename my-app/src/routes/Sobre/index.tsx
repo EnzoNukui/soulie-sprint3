@@ -266,7 +266,7 @@ export default function Sobre() {
               {emocoes.map((emocao, indice) => {
                 const ativa = indice === emocaoAtiva
                 return (
-                  <article key={emocao.nome} className="flex w-44 shrink-0 flex-col items-center text-center transition-all duration-300 motion-reduce:opacity-[1!important] motion-reduce:transform-[none!important] sm:w-56" style={{ opacity: ativa ? 1 : 0.35, transform: `scale(${ativa ? 1 : 0.78})` }}>
+                  <article key={emocao.nome} className="flex w-44 shrink-0 flex-col items-center text-center transition-all duration-300 motion-reduce:opacity-100! motion-reduce:transform-none! sm:w-56" style={{ opacity: ativa ? 1 : 0.35, transform: `scale(${ativa ? 1 : 0.78})` }}>
                     <div className={`flex h-44 w-44 items-center justify-center rounded-full transition-colors duration-300 sm:h-56 sm:w-56 ${ativa ? 'bg-violet-100/80' : 'bg-transparent'}`}>
                       <img src={emocao.imagem} alt={emocao.alt} className="max-h-40 max-w-40 object-contain drop-shadow-[0_18px_22px_rgba(109,40,217,0.18)] sm:max-h-52 sm:max-w-52" />
                     </div>

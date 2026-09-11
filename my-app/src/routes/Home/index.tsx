@@ -312,12 +312,12 @@ export default function Home() {
             <img
               src={avatarSorridente}
               alt="Soulie sorridente"
-              className="absolute left-0 top-5 z-10 w-32 rotate-[-8deg] opacity-90 sm:left-8 sm:w-40"
+              className="absolute left-0 top-5 z-10 w-32 -rotate-8 opacity-90 sm:left-8 sm:w-40"
             />
             <img
               src={avatarComPressa}
               alt="Soulie com pressa"
-              className="absolute right-0 top-8 z-10 w-32 rotate-[8deg] opacity-90 sm:right-8 sm:w-40"
+              className="absolute right-0 top-8 z-10 w-32 rotate-8 opacity-90 sm:right-8 sm:w-40"
             />
           </div>
         </div>
@@ -325,7 +325,7 @@ export default function Home() {
 
       <section ref={secaoDestaqueRef} className="relative h-[320vh] bg-violet-50">
         <div
-          className="sticky top-0 z-[60] h-screen overflow-hidden transition-colors duration-150 motion-reduce:transition-none"
+          className="sticky top-0 z-60 h-screen overflow-hidden transition-colors duration-150 motion-reduce:transition-none"
           style={{ backgroundColor: corDestaque }}
         >
           <div
@@ -353,7 +353,7 @@ export default function Home() {
 
               <div className="relative mx-auto flex w-full max-w-2xl items-center justify-center">
                 <div aria-hidden="true" className="absolute inset-[12%] rounded-full bg-violet-300/35 blur-3xl" />
-                <div className="relative w-48 rotate-[-4deg] overflow-hidden rounded-[2rem] border-[0.45rem] border-violet-950 bg-white p-1.5 shadow-[0_28px_70px_-28px_rgba(76,29,149,0.7)] sm:w-56 lg:w-64">
+                <div className="relative w-48 -rotate-4 overflow-hidden rounded-4xl border-[0.45rem] border-violet-950 bg-white p-1.5 shadow-[0_28px_70px_-28px_rgba(76,29,149,0.7)] sm:w-56 lg:w-64">
                   <div className="aspect-[603/904] overflow-hidden rounded-[1.45rem] bg-violet-50">
                     <img
                       src={printPrototipo}

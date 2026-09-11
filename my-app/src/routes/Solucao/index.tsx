@@ -194,7 +194,7 @@ export default function Solucao() {
               className="absolute bottom-16 left-0 z-20 w-36 drop-shadow-[0_24px_30px_rgba(76,29,149,0.3)] sm:left-8 sm:w-48 lg:-left-4 lg:w-56"
             />
 
-            <div className="relative z-10 w-72 rotate-[3deg] rounded-[3rem] border-[0.65rem] border-violet-950 bg-violet-950 p-1.5 shadow-[0_35px_80px_-28px_rgba(46,16,101,0.65)] sm:w-80 xl:w-88">
+            <div className="relative z-10 w-72 rotate-3 rounded-[3rem] border-[0.65rem] border-violet-950 bg-violet-950 p-1.5 shadow-[0_35px_80px_-28px_rgba(46,16,101,0.65)] sm:w-80 xl:w-88">
               <div aria-hidden="true" className="absolute left-1/2 top-2 z-30 h-6 w-28 -translate-x-1/2 rounded-full bg-violet-950" />
               <div className="aspect-[603/904] overflow-hidden rounded-[2.25rem] bg-white">
                 <img
@@ -235,7 +235,7 @@ export default function Solucao() {
         </div>
       </section>
 
-      <section id="fases-soulie" ref={secaoFasesRef} className="relative z-[60] h-[300vh]">
+      <section id="fases-soulie" ref={secaoFasesRef} className="relative z-60 h-[300vh]">
         <div
           className="sticky top-0 flex h-screen min-h-152 items-center overflow-hidden px-5 py-12 text-white lg:px-8"
           style={{ backgroundColor: corFundoFases }}
@@ -330,7 +330,7 @@ export default function Solucao() {
       </section>
 
       <section id="cta-mvp" className="bg-white px-5 pb-20 pt-0 sm:pb-24 lg:px-8 lg:pb-28">
-        <div className="relative mx-auto grid max-w-7xl items-center overflow-hidden rounded-[2rem] bg-[#1c0b3e] text-white shadow-[0_28px_70px_-30px_rgba(46,16,101,0.75)] lg:min-h-104 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative mx-auto grid max-w-7xl items-center overflow-hidden rounded-4xl bg-[#1c0b3e] text-white shadow-[0_28px_70px_-30px_rgba(46,16,101,0.75)] lg:min-h-104 lg:grid-cols-[0.9fr_1.1fr]">
           <div aria-hidden="true" className="absolute -left-24 -top-28 h-80 w-80 rounded-full bg-violet-600/20 blur-3xl" />
           <div aria-hidden="true" className="absolute -bottom-36 right-8 h-96 w-96 rounded-full bg-fuchsia-500/15 blur-3xl" />
 

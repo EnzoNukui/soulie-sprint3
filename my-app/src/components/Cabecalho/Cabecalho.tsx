@@ -1,24 +1,9 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-
-const links = [
-  { nome: 'Home', caminho: '/' },
-  { nome: 'Integrantes', caminho: '/integrantes' },
-  { nome: 'Sobre', caminho: '/sobre' },
-  { nome: 'Solução', caminho: '/solucao' },
-  { nome: 'Contato', caminho: '/contato' },
-  { nome: 'FAQ', caminho: '/faq' },
-]
+import Menu from '../Menu/Menu'
 
 export default function Cabecalho() {
   const [menuAberto, setMenuAberto] = useState(false)
-
-  const estiloLink = ({ isActive }: { isActive: boolean }) =>
-    `relative px-1 py-2 text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:-translate-x-1/2 after:rounded-full after:bg-violet-600 after:transition-all ${
-      isActive
-        ? 'text-violet-600 after:w-full'
-        : 'text-zinc-700 after:w-0 hover:text-violet-600'
-    }`
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-100 bg-white shadow-[0_4px_18px_-16px_rgba(24,24,27,0.45)]">
@@ -31,16 +16,7 @@ export default function Cabecalho() {
           Soulie
         </NavLink>
 
-        <nav
-          aria-label="Navegação principal"
-          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex"
-        >
-          {links.map((link) => (
-            <NavLink key={link.caminho} to={link.caminho} className={estiloLink}>
-              {link.nome}
-            </NavLink>
-          ))}
-        </nav>
+        <Menu variante="desktop" />
 
         <button
           type="button"
@@ -63,24 +39,7 @@ export default function Cabecalho() {
       </div>
 
       {menuAberto && (
-        <nav
-          id="menu-principal"
-          aria-label="Navegação principal"
-          className="mx-auto max-w-3xl rounded-b-3xl bg-white shadow-[0_18px_35px_-24px_rgba(24,24,27,0.4)] lg:hidden"
-        >
-          <div className="flex flex-col items-center gap-3 border-t border-zinc-100 px-5 py-6">
-            {links.map((link) => (
-              <NavLink
-                key={link.caminho}
-                to={link.caminho}
-                className={estiloLink}
-                onClick={() => setMenuAberto(false)}
-              >
-                {link.nome}
-              </NavLink>
-            ))}
-          </div>
-        </nav>
+        <Menu variante="responsivo" aoNavegar={() => setMenuAberto(false)} />
       )}
     </header>
   )

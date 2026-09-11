@@ -68,7 +68,7 @@ export default function Faq() {
                   aria-expanded={estaAberta}
                   aria-controls={respostaId}
                   onClick={() => setPerguntaAberta(estaAberta ? null : indice)}
-                  className="flex w-full cursor-pointer items-center justify-between gap-5 px-5 py-5 text-left focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-violet-600 sm:px-7 sm:py-6"
+                  className="flex w-full cursor-pointer items-center justify-between gap-5 px-5 py-5 text-left focus-visible:outline-2 focus-visible:-outline-offset-3 focus-visible:outline-violet-600 sm:px-7 sm:py-6"
                 >
                   <span className="text-base font-bold leading-6 text-violet-950 sm:text-lg">
                     {item.pergunta}
