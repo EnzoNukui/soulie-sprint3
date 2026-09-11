@@ -107,11 +107,11 @@ export default function Sobre() {
       if (hero && avatarHero) {
         const caixa = hero.getBoundingClientRect()
         const progresso = reduzirMovimento ? 0 : limitar(-caixa.top / (caixa.height * 0.72), 0, 1)
-        avatarHero.style.transform = `translate3d(0, ${progresso * 90}px, 0) rotate(${progresso * 5}deg) scale(${1 - progresso * 0.12})`
+        avatarHero.style.transform = `translate3d(${-progresso * 24}px, ${progresso * 80}px, 0) rotate(${-progresso * 4}deg) scale(${1 - progresso * 0.1})`
         avatarHero.style.opacity = String(1 - limitar((progresso - 0.72) / 0.28, 0, 1))
-        if (primeiraLinhaHero) primeiraLinhaHero.style.transform = `translate3d(${-progresso * 70}px, 0, 0)`
-        if (segundaLinhaHero) segundaLinhaHero.style.transform = `translate3d(${progresso * 70}px, 0, 0)`
-        if (orbitaHero) orbitaHero.style.transform = `translate(-50%, -50%) rotate(${-12 + progresso * 18}deg) scale(${1 + progresso * 0.08})`
+        if (primeiraLinhaHero) primeiraLinhaHero.style.transform = `translate3d(${-progresso * 48}px, 0, 0)`
+        if (segundaLinhaHero) segundaLinhaHero.style.transform = `translate3d(${progresso * 38}px, 0, 0)`
+        if (orbitaHero) orbitaHero.style.transform = `translate3d(0, ${progresso * 42}px, 0) rotate(${progresso * 2}deg) scale(${1 + progresso * 0.035})`
       }
 
       if (trajetoria && caminho) {
@@ -147,35 +147,36 @@ export default function Sobre() {
 
   return (
     <div ref={paginaRef} className="overflow-x-clip bg-white">
-      <section ref={heroRef} className="relative min-h-[calc(100vh-5rem)] overflow-hidden">
-        <div aria-hidden="true" className="absolute -left-40 top-28 h-96 w-96 rounded-full bg-violet-50" />
-        <div aria-hidden="true" className="absolute -right-28 -top-28 h-96 w-96 rounded-full bg-violet-100/70" />
-        <div ref={orbitaHeroRef} aria-hidden="true" className="absolute left-1/2 top-1/2 h-80 w-[44rem] -translate-x-1/2 -translate-y-1/2 rotate-[-12deg] rounded-[50%] border border-violet-200/70 will-change-transform" />
-        <div aria-hidden="true" className="absolute left-[18%] top-[30%] h-3 w-3 rounded-full bg-violet-400 shadow-[0_0_0_10px_rgba(196,181,253,0.18)]" />
-        <div aria-hidden="true" className="absolute bottom-[24%] right-[17%] h-2 w-2 rounded-full bg-violet-500 shadow-[0_0_0_8px_rgba(196,181,253,0.16)]" />
+      <section ref={heroRef} className="relative min-h-[calc(100vh-5rem)] overflow-hidden bg-[#fefeff]">
+        <div aria-hidden="true" className="absolute -right-32 -top-52 h-128 w-lg rounded-full bg-violet-100/65 blur-sm" />
+        <div aria-hidden="true" className="absolute -bottom-64 -left-48 h-136 w-176 rounded-[50%] bg-violet-50" />
 
-        <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-[94rem] flex-col justify-center px-5 py-20 sm:px-8 lg:px-12">
-          <p className="mb-7 text-center text-xs font-bold uppercase tracking-[0.3em] text-violet-600">Sobre a Soulie</p>
-          <h1 className="relative z-10 text-center text-[clamp(3rem,10vw,9.5rem)] font-black leading-[0.82] tracking-[-0.065em] text-zinc-950">
-            <span ref={primeiraLinhaHeroRef} className="block will-change-transform">Uma ideia que</span>
-            <span ref={segundaLinhaHeroRef} className="mt-5 block text-violet-600 will-change-transform sm:mt-8">ganhou vida.</span>
+        <div ref={orbitaHeroRef} aria-hidden="true" className="pointer-events-none absolute inset-0 will-change-transform">
+          <div className="absolute left-[-18%] top-[18%] h-[34%] w-[138%] rotate-12 rounded-[50%] border-[3rem] border-violet-50/90 sm:border-[5rem]" />
+          <div className="absolute left-[30%] top-[58%] h-[30%] w-[78%] -rotate-12 rounded-[50%] border-[2.5rem] border-violet-100/65 sm:border-[4.5rem]" />
+          <div className="absolute left-[45%] top-[20%] h-[58%] w-[43%] rotate-[-10deg] rounded-[50%] border border-violet-300/70" />
+          <span className="absolute left-[74%] top-[22%] h-4 w-4 rounded-full bg-violet-400 shadow-[0_0_0_10px_rgba(196,181,253,0.2)]" />
+          <span className="absolute left-[86%] top-[43%] h-3 w-3 rounded-full bg-violet-500 shadow-[0_0_0_8px_rgba(196,181,253,0.16)]" />
+          <span className="absolute bottom-[15%] left-[44%] h-3.5 w-3.5 rounded-full bg-violet-400 shadow-[0_0_0_9px_rgba(196,181,253,0.18)]" />
+        </div>
+
+        <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-376 flex-col justify-center px-5 py-20 sm:px-8 lg:px-12">
+          <p className="relative z-20 mb-10 text-center text-xs font-bold uppercase tracking-[0.3em] text-violet-600 sm:mb-14">Sobre a Soulie</p>
+
+          <h1 className="relative z-10 text-[clamp(3.35rem,8.25vw,8rem)] font-black leading-[0.84] tracking-[-0.07em]">
+            <span ref={primeiraLinhaHeroRef} className="block text-zinc-950 will-change-transform">Uma ideia</span>
+            <span ref={segundaLinhaHeroRef} className="mt-4 block text-violet-600 will-change-transform sm:mt-7">que ganhou vida.</span>
           </h1>
 
-          <div className="pointer-events-none absolute left-1/2 top-[47%] z-20 w-28 -translate-x-1/2 -translate-y-1/2 sm:w-48 lg:w-60">
-            <div ref={avatarHeroRef} className="will-change-transform">
-              <img src={imagemSoulie} alt="Soulie confiante entre as palavras do título" className="w-full drop-shadow-[0_24px_30px_rgba(109,40,217,0.24)]" />
-            </div>
-          </div>
-
-          <p className="relative z-30 mx-auto mt-14 max-w-2xl text-center text-base leading-7 text-zinc-600 sm:mt-20 sm:text-lg">
+          <p className="relative z-30 mt-10 max-w-xl text-base leading-7 text-zinc-600 sm:mt-12 sm:text-lg">
             A Soulie nasceu para transformar sustentabilidade em uma jornada mais próxima, leve e contínua.
           </p>
-          <div aria-hidden="true" className="absolute bottom-10 left-5 hidden items-center gap-3 text-[0.65rem] font-bold uppercase tracking-[0.24em] text-zinc-400 sm:left-8 md:flex lg:left-12">
-            <span className="text-violet-600">01</span>
-            <span className="h-px w-10 bg-violet-300" />
-            <span>Origem</span>
+
+          <div className="pointer-events-none relative z-20 mx-auto -mt-3 w-32 sm:-mt-20 sm:ml-auto sm:mr-[5%] sm:w-40 lg:-mt-28 lg:mr-[8%] lg:w-48 xl:w-52">
+            <div ref={avatarHeroRef} className="will-change-transform">
+              <img src={imagemSoulie} alt="Soulie confiante acompanhando a história de sua criação" className="w-full drop-shadow-[0_24px_30px_rgba(109,40,217,0.24)]" />
+            </div>
           </div>
-          <p aria-hidden="true" className="absolute bottom-10 right-5 hidden text-[0.65rem] font-bold uppercase tracking-[0.24em] text-zinc-400 sm:right-8 md:block lg:right-12">Propósito em movimento</p>
         </div>
       </section>
 
@@ -266,7 +267,7 @@ export default function Sobre() {
       </section>
 
       <section ref={secaoEmocoesRef} className="relative h-[340vh] border-y border-violet-100 bg-violet-50/65 motion-reduce:h-auto">
-        <div className="sticky top-20 flex h-[calc(100vh-5rem)] min-h-[38rem] flex-col justify-center overflow-hidden py-10 motion-reduce:relative motion-reduce:top-0 motion-reduce:h-auto">
+        <div className="sticky top-20 flex h-[calc(100vh-5rem)] min-h-152 flex-col justify-center overflow-hidden py-10 motion-reduce:relative motion-reduce:top-0 motion-reduce:h-auto">
           <div className="mx-auto flex w-full max-w-7xl items-end justify-between gap-8 px-5 lg:px-8">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-violet-600">Sempre ao seu lado</p>
@@ -280,7 +281,7 @@ export default function Sobre() {
               {emocoes.map((emocao, indice) => {
                 const ativa = indice === emocaoAtiva
                 return (
-                  <article key={emocao.nome} className="flex w-44 shrink-0 flex-col items-center text-center transition-all duration-300 motion-reduce:[opacity:1!important] motion-reduce:[transform:none!important] sm:w-56" style={{ opacity: ativa ? 1 : 0.35, transform: `scale(${ativa ? 1 : 0.78})` }}>
+                  <article key={emocao.nome} className="flex w-44 shrink-0 flex-col items-center text-center transition-all duration-300 motion-reduce:opacity-[1!important] motion-reduce:transform-[none!important] sm:w-56" style={{ opacity: ativa ? 1 : 0.35, transform: `scale(${ativa ? 1 : 0.78})` }}>
                     <div className={`flex h-44 w-44 items-center justify-center rounded-full transition-colors duration-300 sm:h-56 sm:w-56 ${ativa ? 'bg-violet-100/80' : 'bg-transparent'}`}>
                       <img src={emocao.imagem} alt={emocao.alt} className="max-h-40 max-w-40 object-contain drop-shadow-[0_18px_22px_rgba(109,40,217,0.18)] sm:max-h-52 sm:max-w-52" />
                     </div>
@@ -310,7 +311,7 @@ export default function Sobre() {
         <div className="relative bg-violet-50 px-5 pb-0 pt-16 sm:pt-20 lg:px-8 lg:pt-24">
           <div aria-hidden="true" className="absolute left-[18%] top-[38%] h-3 w-3 rounded-full bg-violet-400 shadow-[0_0_0_9px_rgba(196,181,253,0.18)]" />
           <div aria-hidden="true" className="absolute right-[18%] top-[48%] h-2.5 w-2.5 rounded-full bg-violet-500 shadow-[0_0_0_8px_rgba(196,181,253,0.16)]" />
-          <div aria-hidden="true" className="absolute bottom-10 left-1/2 h-44 w-[32rem] -translate-x-1/2 rounded-[50%] border border-violet-200/70" />
+          <div aria-hidden="true" className="absolute bottom-10 left-1/2 h-44 w-lg -translate-x-1/2 rounded-[50%] border border-violet-200/70" />
 
           <div data-revelar className="relative z-10 mx-auto max-w-4xl translate-y-8 text-center opacity-0 transition-all duration-700">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-violet-600">O próximo capítulo</p>
