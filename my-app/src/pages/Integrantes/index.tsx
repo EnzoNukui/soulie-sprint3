@@ -89,7 +89,7 @@ export default function Integrantes() {
           </p>
         </header>
 
-        <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-y-12 lg:mt-20 lg:grid-cols-2 lg:gap-x-28 lg:gap-y-16">
+        <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-y-12 lg:mt-20 lg:gap-y-16 xl:grid-cols-2 xl:gap-x-28">
           {integrantes.map((integrante, indice) => (
             <CardIntegrante
               key={integrante.rm}

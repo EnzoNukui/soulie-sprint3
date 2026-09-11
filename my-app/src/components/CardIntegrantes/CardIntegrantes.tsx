@@ -25,14 +25,14 @@ export default function CardIntegrante({
 }: CardIntegranteProps) {
   return (
     <article
-      className={`group relative mx-12 flex min-h-80 flex-col items-center justify-center rounded-3xl border border-violet-200 bg-gradient-to-br from-white to-violet-50 px-6 py-9 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-lg sm:mx-16 sm:px-10 lg:mx-0 ${
-        destaque ? "lg:col-span-2 lg:w-full lg:max-w-[32rem] lg:justify-self-center" : ""
+      className={`group relative mx-12 flex min-h-80 flex-col items-center justify-center rounded-3xl border border-violet-200 bg-gradient-to-br from-white to-violet-50 px-6 py-9 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-lg sm:mx-20 sm:px-10 lg:mx-auto lg:w-full lg:max-w-2xl xl:mx-0 xl:max-w-none ${
+        destaque ? "xl:col-span-2 xl:w-full xl:max-w-[32rem] xl:justify-self-center" : ""
       }`}
     >
       <img
         src={avatar}
         alt={`Soulie interagindo com o card de ${nome}`}
-        className={`pointer-events-none absolute top-1/2 z-10 w-20 -translate-y-1/2 object-contain transition-transform duration-300 sm:w-28 lg:w-32 ${posicaoAvatar} ${
+        className={`pointer-events-none absolute top-1/2 z-10 w-20 -translate-y-1/2 object-contain transition-transform duration-300 sm:w-28 lg:w-28 xl:w-32 ${posicaoAvatar} ${
           espelharAvatar
             ? "-scale-x-100 group-hover:-scale-x-105 group-hover:scale-y-105"
             : "group-hover:scale-105"

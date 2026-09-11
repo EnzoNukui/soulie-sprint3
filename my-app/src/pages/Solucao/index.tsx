@@ -12,8 +12,8 @@ import Card from '../../components/Cards/Cards'
 import avatarFeliz from '../../assets/avatar/avatar_feliz.png'
 import avatarRadiante from '../../assets/avatar/avatar_radiante.png'
 import avatarTimido from '../../assets/avatar/avatar_timido.png'
-import avatarPortalCta from '../../assets/solucao/avatar-portal-cta.png'
-import printPrototipo from '../../assets/solucao/prototipo-soul-up.png'
+import avatarPortalCta from '../../assets/produto/avatar-portal-cta.png'
+import printPrototipo from '../../assets/produto/prototipo-soul-up.png'
 
 const linkMvp = 'https://soulieprototipo.vercel.app/jornada/encontro'
 

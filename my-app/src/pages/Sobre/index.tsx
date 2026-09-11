@@ -53,7 +53,6 @@ export default function Sobre() {
   const avatarHeroRef = useRef<HTMLDivElement>(null)
   const primeiraLinhaHeroRef = useRef<HTMLSpanElement>(null)
   const segundaLinhaHeroRef = useRef<HTMLSpanElement>(null)
-  const orbitaHeroRef = useRef<HTMLDivElement>(null)
   const trajetoriaRef = useRef<HTMLDivElement>(null)
   const caminhoRef = useRef<SVGPathElement>(null)
   const secaoEmocoesRef = useRef<HTMLElement>(null)
@@ -97,7 +96,6 @@ export default function Sobre() {
       const avatarHero = avatarHeroRef.current
       const primeiraLinhaHero = primeiraLinhaHeroRef.current
       const segundaLinhaHero = segundaLinhaHeroRef.current
-      const orbitaHero = orbitaHeroRef.current
       const trajetoria = trajetoriaRef.current
       const caminho = caminhoRef.current
       const secaoEmocoes = secaoEmocoesRef.current
@@ -111,7 +109,6 @@ export default function Sobre() {
         avatarHero.style.opacity = String(1 - limitar((progresso - 0.72) / 0.28, 0, 1))
         if (primeiraLinhaHero) primeiraLinhaHero.style.transform = `translate3d(${-progresso * 48}px, 0, 0)`
         if (segundaLinhaHero) segundaLinhaHero.style.transform = `translate3d(${progresso * 38}px, 0, 0)`
-        if (orbitaHero) orbitaHero.style.transform = `translate3d(0, ${progresso * 42}px, 0) rotate(${progresso * 2}deg) scale(${1 + progresso * 0.035})`
       }
 
       if (trajetoria && caminho) {
@@ -148,27 +145,15 @@ export default function Sobre() {
   return (
     <div ref={paginaRef} className="overflow-x-clip bg-white">
       <section ref={heroRef} className="relative min-h-[calc(100vh-5rem)] overflow-hidden bg-[#fefeff]">
-        <div aria-hidden="true" className="absolute -right-32 -top-52 h-128 w-lg rounded-full bg-violet-100/65 blur-sm" />
-        <div aria-hidden="true" className="absolute -bottom-64 -left-48 h-136 w-176 rounded-[50%] bg-violet-50" />
-
-        <div ref={orbitaHeroRef} aria-hidden="true" className="pointer-events-none absolute inset-0 will-change-transform">
-          <div className="absolute left-[-18%] top-[18%] h-[34%] w-[138%] rotate-12 rounded-[50%] border-[3rem] border-violet-50/90 sm:border-[5rem]" />
-          <div className="absolute left-[30%] top-[58%] h-[30%] w-[78%] -rotate-12 rounded-[50%] border-[2.5rem] border-violet-100/65 sm:border-[4.5rem]" />
-          <div className="absolute left-[45%] top-[20%] h-[58%] w-[43%] rotate-[-10deg] rounded-[50%] border border-violet-300/70" />
-          <span className="absolute left-[74%] top-[22%] h-4 w-4 rounded-full bg-violet-400 shadow-[0_0_0_10px_rgba(196,181,253,0.2)]" />
-          <span className="absolute left-[86%] top-[43%] h-3 w-3 rounded-full bg-violet-500 shadow-[0_0_0_8px_rgba(196,181,253,0.16)]" />
-          <span className="absolute bottom-[15%] left-[44%] h-3.5 w-3.5 rounded-full bg-violet-400 shadow-[0_0_0_9px_rgba(196,181,253,0.18)]" />
-        </div>
-
         <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-376 flex-col justify-center px-5 py-20 sm:px-8 lg:px-12">
           <p className="relative z-20 mb-10 text-center text-xs font-bold uppercase tracking-[0.3em] text-violet-600 sm:mb-14">Sobre a Soulie</p>
 
-          <h1 className="relative z-10 text-[clamp(3.35rem,8.25vw,8rem)] font-black leading-[0.84] tracking-[-0.07em]">
+          <h1 className="relative z-10 text-center text-[clamp(3.35rem,8.25vw,8rem)] font-black leading-[0.84] tracking-[-0.07em]">
             <span ref={primeiraLinhaHeroRef} className="block text-zinc-950 will-change-transform">Uma ideia</span>
             <span ref={segundaLinhaHeroRef} className="mt-4 block text-violet-600 will-change-transform sm:mt-7">que ganhou vida.</span>
           </h1>
 
-          <p className="relative z-30 mt-10 max-w-xl text-base leading-7 text-zinc-600 sm:mt-12 sm:text-lg">
+          <p className="relative z-30 mx-auto mt-10 max-w-xl text-center text-base leading-7 text-zinc-600 sm:mt-12 sm:text-lg">
             A Soulie nasceu para transformar sustentabilidade em uma jornada mais próxima, leve e contínua.
           </p>
 
