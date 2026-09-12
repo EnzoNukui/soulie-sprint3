@@ -2,20 +2,20 @@ import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { BellRing, Gift, MessageCircleMore } from 'lucide-react'
 import Botao from '../../components/Botoes/Botoes'
-import avatarCta from '../../assets/avatar/avatar_cta.png'
-import avatarBravo from '../../assets/avatar/avatar_bravo.png'
-import avatarComPressa from '../../assets/avatar/avatar_com_pressa.png'
-import avatarEntediado from '../../assets/avatar/avatar_entediado.png'
-import avatarFeliz from '../../assets/avatar/avatar_feliz.png'
-import avatarRadiante from '../../assets/avatar/avatar_radiante.png'
-import avatarSorridente from '../../assets/avatar/avatar_sorridente.png'
-import avatarTimido from '../../assets/avatar/avatar_timido.png'
-import avatarTriste from '../../assets/avatar/avatar_triste.png'
+import avatarCta from '../../assets/avatar/expressoes/avatar_cta.png'
+import avatarBravo from '../../assets/avatar/expressoes/avatar_bravo.png'
+import avatarComPressa from '../../assets/avatar/expressoes/avatar_com_pressa.png'
+import avatarEntediado from '../../assets/avatar/expressoes/avatar_entediado.png'
+import avatarFeliz from '../../assets/avatar/expressoes/avatar_feliz.png'
+import avatarRadiante from '../../assets/avatar/expressoes/avatar_radiante.png'
+import avatarSorridente from '../../assets/avatar/expressoes/avatar_sorridente.png'
+import avatarTimido from '../../assets/avatar/expressoes/avatar_timido.png'
+import avatarTriste from '../../assets/avatar/expressoes/avatar_triste.png'
 import imagemSoulie from '../../assets/avatar/imagem_soulie.png'
-import soulie01 from '../../assets/avatar/soulie01.png'
-import soulie02 from '../../assets/avatar/soulie02.png'
-import soulie03 from '../../assets/avatar/soulie03.png'
-import soulie04 from '../../assets/avatar/soulie04.png'
+import soulie01 from '../../assets/avatar/historia/soulie01.png'
+import soulie02 from '../../assets/avatar/historia/soulie02.png'
+import soulie03 from '../../assets/avatar/historia/soulie03.png'
+import soulie04 from '../../assets/avatar/historia/soulie04.png'
 
 const etapas = [
   { numero: '01', titulo: 'Inspiração', descricao: 'A curiosidade foi o ponto de partida para aproximar sustentabilidade e rotina.', imagem: soulie01, alt: 'Primeira inspiração visual para a Soulie' },
@@ -143,7 +143,7 @@ export default function Sobre() {
   }, [])
 
   return (
-    <div ref={paginaRef} className="overflow-x-clip bg-white">
+    <main ref={paginaRef} className="overflow-x-clip bg-white">
       <section ref={heroRef} className="relative min-h-[calc(100vh-5rem)] overflow-hidden bg-[#fefeff]">
         <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-376 flex-col justify-center px-5 py-20 sm:px-8 lg:px-12">
           <p className="relative z-20 mb-10 text-center text-xs font-bold uppercase tracking-[0.3em] text-violet-600 sm:mb-14">Sobre a Soulie</p>
@@ -266,7 +266,7 @@ export default function Sobre() {
               {emocoes.map((emocao, indice) => {
                 const ativa = indice === emocaoAtiva
                 return (
-                  <article key={emocao.nome} className="flex w-44 shrink-0 flex-col items-center text-center transition-all duration-300 motion-reduce:opacity-[1!important] motion-reduce:transform-[none!important] sm:w-56" style={{ opacity: ativa ? 1 : 0.35, transform: `scale(${ativa ? 1 : 0.78})` }}>
+                  <article key={emocao.nome} className="flex w-44 shrink-0 flex-col items-center text-center transition-all duration-300 motion-reduce:opacity-100! motion-reduce:transform-none! sm:w-56" style={{ opacity: ativa ? 1 : 0.35, transform: `scale(${ativa ? 1 : 0.78})` }}>
                     <div className={`flex h-44 w-44 items-center justify-center rounded-full transition-colors duration-300 sm:h-56 sm:w-56 ${ativa ? 'bg-violet-100/80' : 'bg-transparent'}`}>
                       <img src={emocao.imagem} alt={emocao.alt} className="max-h-40 max-w-40 object-contain drop-shadow-[0_18px_22px_rgba(109,40,217,0.18)] sm:max-h-52 sm:max-w-52" />
                     </div>
@@ -314,6 +314,6 @@ export default function Sobre() {
 
         <div aria-hidden="true" className="relative z-30 h-5 bg-linear-to-r from-violet-950 via-violet-900 to-indigo-950" />
       </section>
-    </div>
+    </main>
   )
 }

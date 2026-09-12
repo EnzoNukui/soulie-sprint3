@@ -25,8 +25,8 @@ export default function CardIntegrante({
 }: CardIntegranteProps) {
   return (
     <article
-      className={`group relative mx-12 flex min-h-80 flex-col items-center justify-center rounded-3xl border border-violet-200 bg-gradient-to-br from-white to-violet-50 px-6 py-9 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-lg sm:mx-20 sm:px-10 lg:mx-auto lg:w-full lg:max-w-2xl xl:mx-0 xl:max-w-none ${
-        destaque ? "xl:col-span-2 xl:w-full xl:max-w-[32rem] xl:justify-self-center" : ""
+      className={`group relative mx-12 flex min-h-80 flex-col items-center justify-center rounded-3xl border border-violet-200 bg-linear-to-br from-white to-violet-50 px-6 py-9 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-lg sm:mx-20 sm:px-10 lg:mx-auto lg:w-full lg:max-w-2xl xl:mx-0 xl:max-w-none ${
+        destaque ? "xl:col-span-2 xl:w-full xl:max-w-lg xl:justify-self-center" : ""
       }`}
     >
       <img

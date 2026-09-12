@@ -9,11 +9,14 @@ import {
 } from 'lucide-react'
 import Botao from '../../components/Botoes/Botoes'
 import Card from '../../components/Cards/Cards'
-import avatarFeliz from '../../assets/avatar/avatar_feliz.png'
-import avatarRadiante from '../../assets/avatar/avatar_radiante.png'
-import avatarTimido from '../../assets/avatar/avatar_timido.png'
-import avatarPortalCta from '../../assets/produto/avatar-portal-cta.png'
-import printPrototipo from '../../assets/produto/prototipo-soul-up.png'
+import avatarFeliz from '../../assets/avatar/expressoes/avatar_feliz.png'
+import avatarRadiante from '../../assets/avatar/expressoes/avatar_radiante.png'
+import avatarTimido from '../../assets/avatar/expressoes/avatar_timido.png'
+import avatarPortalCta from '../../assets/produto/apresentacao/avatar-portal-cta.png'
+import imagemComunidade from '../../assets/produto/cards/comunidade-sustentavel.webp'
+import imagemMissao from '../../assets/produto/cards/missao-sustentavel.webp'
+import imagemProgresso from '../../assets/produto/cards/progresso-sustentavel.webp'
+import printPrototipo from '../../assets/produto/apresentacao/prototipo-soul-up.png'
 
 const linkMvp = 'https://soulieprototipo.vercel.app/jornada/encontro'
 
@@ -78,12 +81,9 @@ const fases = [
 ]
 
 const imagensCards = {
-  acao:
-    'https://images.unsplash.com/photo-1755544624610-30db0fd65109?auto=format&fit=crop&w=1200&q=85',
-  comunidade:
-    'https://images.unsplash.com/photo-1611843467160-25afb8df1074?auto=format&fit=crop&w=1200&q=85',
-  impacto:
-    'https://images.unsplash.com/photo-1771172195332-3bc9ded9f3b5?auto=format&fit=crop&w=1200&q=85',
+  acao: imagemMissao,
+  comunidade: imagemComunidade,
+  impacto: imagemProgresso,
 }
 
 const limitar = (valor: number, minimo: number, maximo: number) =>
@@ -164,7 +164,7 @@ export default function Solucao() {
   const corFundoFases = calcularCorFases(progressoFases)
 
   return (
-    <div className="overflow-x-clip bg-[#fbfaf7]">
+    <main className="overflow-x-clip bg-[#fbfaf7]">
       <section className="relative overflow-hidden border-b border-violet-100">
         <div aria-hidden="true" className="absolute -left-40 -top-40 h-96 w-96 rounded-full bg-violet-100/60 blur-3xl" />
         <div aria-hidden="true" className="absolute -bottom-48 right-0 h-112 w-112 rounded-full bg-emerald-50 blur-3xl" />
@@ -194,7 +194,7 @@ export default function Solucao() {
               className="absolute bottom-16 left-0 z-20 w-36 drop-shadow-[0_24px_30px_rgba(76,29,149,0.3)] sm:left-8 sm:w-48 lg:-left-4 lg:w-56"
             />
 
-            <div className="relative z-10 w-72 rotate-[3deg] rounded-[3rem] border-[0.65rem] border-violet-950 bg-violet-950 p-1.5 shadow-[0_35px_80px_-28px_rgba(46,16,101,0.65)] sm:w-80 xl:w-88">
+            <div className="relative z-10 w-72 rotate-3 rounded-[3rem] border-[0.65rem] border-violet-950 bg-violet-950 p-1.5 shadow-[0_35px_80px_-28px_rgba(46,16,101,0.65)] sm:w-80 xl:w-88">
               <div aria-hidden="true" className="absolute left-1/2 top-2 z-30 h-6 w-28 -translate-x-1/2 rounded-full bg-violet-950" />
               <div className="aspect-[603/904] overflow-hidden rounded-[2.25rem] bg-white">
                 <img
@@ -235,7 +235,7 @@ export default function Solucao() {
         </div>
       </section>
 
-      <section id="fases-soulie" ref={secaoFasesRef} className="relative z-[60] h-[300vh]">
+      <section id="fases-soulie" ref={secaoFasesRef} className="relative z-60 h-[300vh]">
         <div
           className="sticky top-0 flex h-screen min-h-152 items-center overflow-hidden px-5 py-12 text-white lg:px-8"
           style={{ backgroundColor: corFundoFases }}
@@ -330,7 +330,7 @@ export default function Solucao() {
       </section>
 
       <section id="cta-mvp" className="bg-white px-5 pb-20 pt-0 sm:pb-24 lg:px-8 lg:pb-28">
-        <div className="relative mx-auto grid max-w-7xl items-center overflow-hidden rounded-[2rem] bg-[#1c0b3e] text-white shadow-[0_28px_70px_-30px_rgba(46,16,101,0.75)] lg:min-h-104 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative mx-auto grid max-w-7xl items-center overflow-hidden rounded-4xl bg-[#1c0b3e] text-white shadow-[0_28px_70px_-30px_rgba(46,16,101,0.75)] lg:min-h-104 lg:grid-cols-[0.9fr_1.1fr]">
           <div aria-hidden="true" className="absolute -left-24 -top-28 h-80 w-80 rounded-full bg-violet-600/20 blur-3xl" />
           <div aria-hidden="true" className="absolute -bottom-36 right-8 h-96 w-96 rounded-full bg-fuchsia-500/15 blur-3xl" />
 
@@ -357,6 +357,6 @@ export default function Solucao() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   )
 }
