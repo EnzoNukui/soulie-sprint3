@@ -25,6 +25,7 @@ Nesta etapa (Sprint 03), o front-end foi desenvolvido em **React + Vite + TypeSc
 
 A arquitetura do repositório foi organizada para separar componentes, páginas, rotas e recursos visuais, facilitando a manutenção e a escalabilidade da aplicação.
 
+```text
 soulie-sprint3/
 ├── my-app/
 │   ├── public/
@@ -32,10 +33,10 @@ soulie-sprint3/
 │   │       └── soulie_favicon.svg
 │   ├── src/
 │   │   ├── assets/
-│   │   │   ├── avatar/             # expressões do avatar (feliz, bravo, triste, radiante, tímido...)
-│   │   │   ├── avatar_integrantes/ # ilustrações do Soulie usadas na página de integrantes
-│   │   │   ├── integrantes/        # fotos dos membros do grupo
-│   │   │   └── produto/            # imagens do protótipo e conceito do produto
+│   │   │   ├── avatar/
+│   │   │   ├── avatar_integrantes/
+│   │   │   ├── integrantes/
+│   │   │   └── produto/
 │   │   ├── components/
 │   │   │   ├── Botoes/
 │   │   │   ├── Cabecalho/
@@ -60,7 +61,7 @@ soulie-sprint3/
 │   ├── package.json
 │   └── vite.config.ts
 └── README.md
-
+```
 
 ## 🖼️  Ícones do Projeto
 
