@@ -133,3 +133,61 @@ A página Contato disponibiliza um formulário para o usuário relatar problemas
 | :---: | :---: |
 | <img src="./my-app/src/assets/produto/contato-antigo.png" alt="Contato antigo do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/contato-novo.png" alt="Contato novo do Soulie" width="100%"> |
 
+## 👥 Autores e Créditos
+
+Conheça os desenvolvedores responsáveis pela idealização e desenvolvimento do projeto **Soulie**:
+
+<table>
+  <thead>
+    <tr>
+      <th>Foto</th>
+      <th>Nome do Integrante</th>
+      <th>RM</th>
+      <th>Turma</th>
+      <th>LinkedIn</th>
+      <th>GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="./my-app/src/assets/integrantes/foto_arthur.png" width="60"></td>
+      <td>Arthur Carvalho Brito Martins</td>
+      <td>RM 572325</td>
+      <td>1TDSPH</td>
+      <td><a href="https://www.linkedin.com/in/arthur-martinss/">LinkedIn</a></td>
+      <td><a href="https://github.com/arthurmartinss">GitHub</a></td>
+    </tr>
+    <tr>
+      <td><img src="./my-app/src/assets/integrantes/foto_diego.jpeg" width="60"></td>
+      <td>Diego Soares Trujillo</td>
+      <td>RM 570147</td>
+      <td>1TDSPH</td>
+      <td><a href="https://www.linkedin.com/in/diego-trujillo-3441b9380/">LinkedIn</a></td>
+      <td><a href="https://github.com/diegotrujillo011">GitHub</a></td>
+    </tr>
+    <tr>
+      <td><img src="./my-app/src/assets/integrantes/foto_enzo.jpeg" width="60"></td>
+      <td>Enzo Nukui da Silva</td>
+      <td>RM 569770</td>
+      <td>1TDSPH</td>
+      <td><a href="https://www.linkedin.com/in/enzo-nukui/">LinkedIn</a></td>
+      <td><a href="https://github.com/EnzoNukui">GitHub</a></td>
+    </tr>
+    <tr>
+      <td><img src="./my-app/src/assets/integrantes/foto_leticia_cardoso.jpeg" width="60"></td>
+      <td>Leticia Cardoso de Almeida</td>
+      <td>RM 569415</td>
+      <td>1TDSPH</td>
+      <td><a href="https://www.linkedin.com/in/let%C3%ADcia-almeida-70b851294/">LinkedIn</a></td>
+      <td><a href="https://github.com/lehalmeidafc0">GitHub</a></td>
+    </tr>
+    <tr>
+      <td><img src="./my-app/src/assets/integrantes/foto_leticia_dias.jpeg" width="60"></td>
+      <td>Leticia Dias Araujo Felix Moratori</td>
+      <td>RM 569138</td>
+      <td>1TDSPH</td>
+      <td><a href="https://www.linkedin.com/in/leticia-felix-660253286">LinkedIn</a></td>
+      <td><a href="https://github.com/LeticiaFelix18">GitHub</a></td>
+    </tr>
+  </tbody>
+</table>
