@@ -357,7 +357,7 @@ export default function Home() {
               <div className="relative mx-auto flex w-full max-w-2xl items-center justify-center">
                 <div aria-hidden="true" className="absolute inset-[12%] rounded-full bg-violet-300/35 blur-3xl" />
                 <div className="relative w-48 -rotate-4 overflow-hidden rounded-4xl border-[0.45rem] border-violet-950 bg-white p-1.5 shadow-[0_28px_70px_-28px_rgba(76,29,149,0.7)] sm:w-56 lg:w-64">
-                  <div className="aspect-[603/904] overflow-hidden rounded-[1.45rem] bg-violet-50">
+                  <div className="aspect-603/904 overflow-hidden rounded-[1.45rem] bg-violet-50">
                     <img
                       src={printPrototipo}
                       alt="Tela inicial do protótipo da Soulie"
