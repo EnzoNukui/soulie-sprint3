@@ -60,3 +60,23 @@ soulie-sprint3/
 │   ├── package.json
 │   └── vite.config.ts
 └── README.md
+
+
+## 🖼️  Ícones do Projeto
+
+O Soulie utiliza um avatar animado com diferentes expressões faciais para reforçar a experiência de gamificação, reagindo ao progresso e ao comportamento do usuário dentro da plataforma:
+
+| Expressão | Imagem | Quando aparece |
+|---|---|---|
+| Feliz | <img src="./my-app/src/assets/avatar/avatar_feliz.png" width="60"> | Conclusão de missões |
+| Radiante | <img src="./my-app/src/assets/avatar/avatar_radiante.png" width="60"> | Marcos de streak |
+| Sorridente | <img src="./my-app/src/assets/avatar/avatar_sorridente.png" width="60"> | Progresso positivo geral |
+| Bravo | <img src="./my-app/src/assets/avatar/avatar_bravo.png" width="60"> | Quebra de streak |
+| Triste | <img src="./my-app/src/assets/avatar/avatar_triste.png" width="60"> | Longa inatividade |
+| Entediado | <img src="./my-app/src/assets/avatar/avatar_entediado.png" width="60"> | Inatividade moderada |
+| Tímido | <img src="./my-app/src/assets/avatar/avatar_timido.png" width="60"> | Onboarding, primeiras interações |
+| Com dúvida | <img src="./my-app/src/assets/avatar/avatar_duvida.png" width="60"> | Momentos de ajuda/tutorial |
+| Com pressa | <img src="./my-app/src/assets/avatar/avatar_cta.png" width="60"> | Lembretes e urgência de missões |
+
+Além do avatar principal, o projeto também conta com ilustrações complementares do Soulie (acenando, apontando, espiando, em pose positiva) utilizadas na página de Integrantes, reforçando a identidade visual e o tom lúdico do produto.
+
