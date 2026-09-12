@@ -23,7 +23,7 @@ export default function Cabecalho() {
   }, [menuAberto])
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-100 bg-white shadow-[0_4px_18px_-16px_rgba(24,24,27,0.45)]">
+    <header className="fixed inset-x-0 top-0 z-70 border-b border-zinc-100 bg-white shadow-[0_4px_18px_-16px_rgba(24,24,27,0.45)]">
       <div className="relative mx-auto flex h-20 max-w-7xl items-center px-5 sm:px-6 lg:px-8">
         <NavLink
           to="/"

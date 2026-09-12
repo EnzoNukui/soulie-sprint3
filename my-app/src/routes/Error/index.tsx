@@ -13,7 +13,7 @@ export default function ErrorPage() {
   }, [])
 
   return (
-    <div className="flex min-h-screen flex-col bg-white text-zinc-900">
+    <div className="flex min-h-screen flex-col bg-white pt-20 text-zinc-900">
       <Cabecalho />
 
       <main className="relative flex flex-1 items-center justify-center overflow-hidden px-5 py-14 sm:py-16">
