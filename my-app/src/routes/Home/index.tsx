@@ -10,13 +10,13 @@ import {
   UsersRound,
 } from 'lucide-react'
 import Botao from '../../components/Botoes/Botoes'
-import avatarComPressa from '../../assets/avatar/avatar_com_pressa.png'
-import avatarFeliz from '../../assets/avatar/avatar_feliz.png'
-import avatarRadiante from '../../assets/avatar/avatar_radiante.png'
-import avatarSorridente from '../../assets/avatar/avatar_sorridente.png'
-import avatarTimido from '../../assets/avatar/avatar_timido.png'
+import avatarComPressa from '../../assets/avatar/expressoes/avatar_com_pressa.png'
+import avatarFeliz from '../../assets/avatar/expressoes/avatar_feliz.png'
+import avatarRadiante from '../../assets/avatar/expressoes/avatar_radiante.png'
+import avatarSorridente from '../../assets/avatar/expressoes/avatar_sorridente.png'
+import avatarTimido from '../../assets/avatar/expressoes/avatar_timido.png'
 import imagemSoulie from '../../assets/avatar/imagem_soulie.png'
-import printPrototipo from '../../assets/produto/prototipo-soul-up.png'
+import printPrototipo from '../../assets/produto/apresentacao/prototipo-soul-up.png'
 
 const linkMvp = 'https://soulieprototipo.vercel.app/jornada/encontro'
 
@@ -120,9 +120,10 @@ export default function Home() {
   const corDestaque = interpolarCor([245, 243, 255], [46, 16, 101], progressoCor)
   const saidaMvp = limitar((progressoDestaque - 0.34) / 0.22, 0, 1)
   const entradaSobre = limitar((progressoDestaque - 0.46) / 0.24, 0, 1)
+  const mostrarSobre = entradaSobre >= 0.5
 
   return (
-    <div className="overflow-x-clip bg-white">
+    <main className="overflow-x-clip bg-white">
       <section className="relative">
         <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 py-20 sm:py-24 lg:grid-cols-2 lg:px-8 lg:py-28">
           <div className="relative z-10 text-center lg:text-left">
@@ -312,12 +313,12 @@ export default function Home() {
             <img
               src={avatarSorridente}
               alt="Soulie sorridente"
-              className="absolute left-0 top-5 z-10 w-32 rotate-[-8deg] opacity-90 sm:left-8 sm:w-40"
+              className="absolute left-0 top-5 z-10 w-32 -rotate-8 opacity-90 sm:left-8 sm:w-40"
             />
             <img
               src={avatarComPressa}
               alt="Soulie com pressa"
-              className="absolute right-0 top-8 z-10 w-32 rotate-[8deg] opacity-90 sm:right-8 sm:w-40"
+              className="absolute right-0 top-8 z-10 w-32 rotate-8 opacity-90 sm:right-8 sm:w-40"
             />
           </div>
         </div>
@@ -325,15 +326,16 @@ export default function Home() {
 
       <section ref={secaoDestaqueRef} className="relative h-[320vh] bg-violet-50">
         <div
-          className="sticky top-0 z-[60] h-screen overflow-hidden transition-colors duration-150 motion-reduce:transition-none"
+          className="sticky top-0 z-60 h-screen overflow-hidden transition-colors duration-150 motion-reduce:transition-none"
           style={{ backgroundColor: corDestaque }}
         >
           <div
-            aria-hidden={progressoDestaque > 0.62}
+            aria-hidden={mostrarSobre}
+            inert={mostrarSobre}
             className="absolute inset-0 flex items-center px-5 py-12 transition-opacity duration-200 motion-reduce:transition-none lg:px-8"
             style={{
               opacity: 1 - saidaMvp,
-              pointerEvents: saidaMvp > 0.75 ? 'none' : 'auto',
+              pointerEvents: mostrarSobre ? 'none' : 'auto',
               transform: `translate3d(0, ${-saidaMvp * 36}px, 0)`,
             }}
           >
@@ -353,7 +355,7 @@ export default function Home() {
 
               <div className="relative mx-auto flex w-full max-w-2xl items-center justify-center">
                 <div aria-hidden="true" className="absolute inset-[12%] rounded-full bg-violet-300/35 blur-3xl" />
-                <div className="relative w-48 rotate-[-4deg] overflow-hidden rounded-[2rem] border-[0.45rem] border-violet-950 bg-white p-1.5 shadow-[0_28px_70px_-28px_rgba(76,29,149,0.7)] sm:w-56 lg:w-64">
+                <div className="relative w-48 -rotate-4 overflow-hidden rounded-4xl border-[0.45rem] border-violet-950 bg-white p-1.5 shadow-[0_28px_70px_-28px_rgba(76,29,149,0.7)] sm:w-56 lg:w-64">
                   <div className="aspect-[603/904] overflow-hidden rounded-[1.45rem] bg-violet-50">
                     <img
                       src={printPrototipo}
@@ -372,11 +374,12 @@ export default function Home() {
           </div>
 
           <div
-            aria-hidden={progressoDestaque < 0.38}
+            aria-hidden={!mostrarSobre}
+            inert={!mostrarSobre}
             className="absolute inset-0 flex items-center px-5 py-12 text-white transition-opacity duration-200 motion-reduce:transition-none lg:px-8"
             style={{
               opacity: entradaSobre,
-              pointerEvents: entradaSobre < 0.7 ? 'none' : 'auto',
+              pointerEvents: mostrarSobre ? 'auto' : 'none',
               transform: `translate3d(0, ${(1 - entradaSobre) * 42}px, 0)`,
             }}
           >
@@ -420,6 +423,44 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+
+      <section className="relative overflow-hidden border-t border-violet-100 bg-white">
+        <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-5 pb-14 pt-20 text-center sm:px-8 sm:pb-16 sm:pt-24">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-violet-600">
+            Sua jornada continua
+          </p>
+          <h2 className="mt-4 max-w-4xl text-4xl font-black tracking-[-0.04em] text-violet-950 sm:text-5xl lg:text-6xl">
+            Quer fazer parte dessa jornada?
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-violet-950/70 sm:text-lg">
+            Converse com a gente e conheça melhor a proposta da Soulie.
+          </p>
+          <div className="mt-8 flex justify-center">
+            <Botao texto="Fale com a gente" onClick={() => navigate('/contato')} />
+          </div>
+
+          <div className="relative mt-10 flex justify-center">
+            <Star
+              aria-hidden="true"
+              className="absolute -left-10 top-10 h-5 w-5 fill-violet-300 text-violet-300 sm:-left-16 sm:h-6 sm:w-6"
+            />
+            <Star
+              aria-hidden="true"
+              className="absolute -right-8 top-24 h-4 w-4 fill-violet-200 text-violet-200 sm:-right-14 sm:h-5 sm:w-5"
+            />
+            <img
+              src={imagemSoulie}
+              alt="Soulie sorrindo com os braços cruzados"
+              className="relative w-40 drop-shadow-[0_20px_30px_rgba(109,40,217,0.2)] sm:w-44 lg:w-48"
+            />
+          </div>
+        </div>
+
+        <div
+          aria-hidden="true"
+          className="absolute -bottom-14 left-1/2 h-20 w-[115%] -translate-x-1/2 rounded-t-[50%] border-t-2 border-violet-200/70 bg-violet-50/50"
+        />
+      </section>
+    </main>
   )
 }

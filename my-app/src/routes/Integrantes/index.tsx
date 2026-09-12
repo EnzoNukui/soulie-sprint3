@@ -4,11 +4,11 @@ import fotoDiego from "../../assets/integrantes/foto_diego.jpeg";
 import fotoEnzo from "../../assets/integrantes/foto_enzo.jpeg";
 import fotoLeticiaCardoso from "../../assets/integrantes/foto_leticia_cardoso.jpeg";
 import fotoLeticiaDias from "../../assets/integrantes/foto_leticia_dias.jpeg";
-import soulieAcenando from "../../assets/avatar_integrantes/soulie-acenando.png";
-import soulieApontando from "../../assets/avatar_integrantes/soulie-apontando.png";
-import soulieEspiando from "../../assets/avatar_integrantes/soulie-espiando.png";
-import souliePaz from "../../assets/avatar_integrantes/soulie-paz.png";
-import souliePositivo from "../../assets/avatar_integrantes/soulie-positivo.png";
+import soulieAcenando from "../../assets/avatar/integrantes/soulie-acenando.png";
+import soulieApontando from "../../assets/avatar/integrantes/soulie-apontando.png";
+import soulieEspiando from "../../assets/avatar/integrantes/soulie-espiando.png";
+import souliePaz from "../../assets/avatar/integrantes/soulie-paz.png";
+import souliePositivo from "../../assets/avatar/integrantes/soulie-positivo.png";
 import CardIntegrante from "../../components/CardIntegrantes/CardIntegrantes";
 
 const integrantes = [

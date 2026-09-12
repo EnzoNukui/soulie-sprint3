@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom'
 
 const links = [
   { nome: 'Home', caminho: '/' },
-  { nome: 'Integrantes', caminho: '/integrantes' },
   { nome: 'Sobre', caminho: '/sobre' },
   { nome: 'Solução', caminho: '/solucao' },
-  { nome: 'Contato', caminho: '/contato' },
+  { nome: 'Integrantes', caminho: '/integrantes' },
   { nome: 'FAQ', caminho: '/faq' },
+  { nome: 'Contato', caminho: '/contato' },
 ]
 
 export default function Rodape() {

@@ -1,12 +1,19 @@
-import { Outlet } from 'react-router-dom'
+import { useLayoutEffect } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import Cabecalho from './components/Cabecalho/Cabecalho'
 import Rodape from './components/Rodape/Rodape'
 
 export default function App() {
+  const { pathname } = useLocation()
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
     <div className="flex min-h-screen flex-col bg-violet-50/30 text-zinc-900">
-      <Cabecalho />      
-      <Outlet />     
+      <Cabecalho />
+      <Outlet />
       <Rodape />
     </div>
   )
