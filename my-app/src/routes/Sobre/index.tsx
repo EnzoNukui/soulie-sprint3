@@ -191,7 +191,7 @@ export default function Sobre() {
             </ol>
           </div>
 
-          <div ref={trajetoriaRef} className="relative mx-auto mt-24 hidden h-[1200px] max-w-6xl md:block">
+          <div ref={trajetoriaRef} className="relative mx-auto mt-24 hidden h-300 max-w-6xl md:block">
             <svg aria-hidden="true" viewBox="0 0 1000 1300" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
               <path d="M500 0 C670 38 670 90 500 130 C330 170 330 330 500 370 C670 410 670 570 500 610 C330 650 330 810 500 850 C670 890 670 1050 500 1090 C410 1112 410 1190 500 1300" fill="none" stroke="rgb(221 214 254)" strokeWidth="3" strokeLinecap="round" />
               <path ref={caminhoRef} pathLength="1" d="M500 0 C670 38 670 90 500 130 C330 170 330 330 500 370 C670 410 670 570 500 610 C330 650 330 810 500 850 C670 890 670 1050 500 1090 C410 1112 410 1190 500 1300" fill="none" stroke="rgb(139 92 246)" strokeWidth="5" strokeLinecap="round" strokeDasharray="1" strokeDashoffset="1" />
@@ -266,7 +266,21 @@ export default function Sobre() {
               {emocoes.map((emocao, indice) => {
                 const ativa = indice === emocaoAtiva
                 return (
-                  <article key={emocao.nome} className="flex w-44 shrink-0 flex-col items-center text-center transition-all duration-300 motion-reduce:opacity-100! motion-reduce:transform-none! sm:w-56" style={{ opacity: ativa ? 1 : 0.35, transform: `scale(${ativa ? 1 : 0.78})` }}>
+                  <article
+                    key={emocao.nome}
+                    role="button"
+                    tabIndex={0}
+                    aria-pressed={ativa}
+                    aria-label={`Selecionar estado ${emocao.nome}`}
+                    onClick={() => setEmocaoAtiva(indice)}
+                    onKeyDown={(evento) => {
+                      if (evento.key !== 'Enter' && evento.key !== ' ') return
+                      evento.preventDefault()
+                      setEmocaoAtiva(indice)
+                    }}
+                    className="flex w-44 shrink-0 cursor-pointer flex-col items-center rounded-3xl text-center transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600 motion-reduce:opacity-100! motion-reduce:transform-none! sm:w-56"
+                    style={{ opacity: ativa ? 1 : 0.35, transform: `scale(${ativa ? 1 : 0.78})` }}
+                  >
                     <div className={`flex h-44 w-44 items-center justify-center rounded-full transition-colors duration-300 sm:h-56 sm:w-56 ${ativa ? 'bg-violet-100/80' : 'bg-transparent'}`}>
                       <img src={emocao.imagem} alt={emocao.alt} className="max-h-40 max-w-40 object-contain drop-shadow-[0_18px_22px_rgba(109,40,217,0.18)] sm:max-h-52 sm:max-w-52" />
                     </div>
@@ -307,8 +321,8 @@ export default function Sobre() {
             </div>
           </div>
 
-          <div className="relative z-20 mx-auto mt-10 h-44 max-w-xl overflow-hidden sm:mt-12 sm:h-52">
-            <img src={avatarCta} alt="Soulie sorridente aparecendo por trás do rodapé" className="absolute left-1/2 top-0 w-64 -translate-x-1/2 drop-shadow-[0_20px_28px_rgba(109,40,217,0.22)] sm:w-72" />
+          <div className="relative z-20 mx-auto mt-10 flex max-w-xl justify-center px-5 pb-10 sm:mt-12 sm:pb-12">
+            <img src={avatarCta} alt="Soulie sorridente celebrando o próximo capítulo" className="w-52 object-contain drop-shadow-[0_20px_28px_rgba(109,40,217,0.22)] sm:w-64 lg:w-72" />
           </div>
         </div>
 

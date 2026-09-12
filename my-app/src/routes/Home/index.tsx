@@ -16,6 +16,7 @@ import avatarRadiante from '../../assets/avatar/expressoes/avatar_radiante.png'
 import avatarSorridente from '../../assets/avatar/expressoes/avatar_sorridente.png'
 import avatarTimido from '../../assets/avatar/expressoes/avatar_timido.png'
 import imagemSoulie from '../../assets/avatar/imagem_soulie.png'
+import animacaoSoulie from '../../assets/avatar/soulie-animacao.mp4'
 import printPrototipo from '../../assets/produto/apresentacao/prototipo-soul-up.png'
 
 const linkMvp = 'https://soulieprototipo.vercel.app/jornada/encontro'
@@ -356,7 +357,7 @@ export default function Home() {
               <div className="relative mx-auto flex w-full max-w-2xl items-center justify-center">
                 <div aria-hidden="true" className="absolute inset-[12%] rounded-full bg-violet-300/35 blur-3xl" />
                 <div className="relative w-48 -rotate-4 overflow-hidden rounded-4xl border-[0.45rem] border-violet-950 bg-white p-1.5 shadow-[0_28px_70px_-28px_rgba(76,29,149,0.7)] sm:w-56 lg:w-64">
-                  <div className="aspect-[603/904] overflow-hidden rounded-[1.45rem] bg-violet-50">
+                  <div className="aspect-603/904 overflow-hidden rounded-[1.45rem] bg-violet-50">
                     <img
                       src={printPrototipo}
                       alt="Tela inicial do protótipo da Soulie"
@@ -448,11 +449,19 @@ export default function Home() {
               aria-hidden="true"
               className="absolute -right-8 top-24 h-4 w-4 fill-violet-200 text-violet-200 sm:-right-14 sm:h-5 sm:w-5"
             />
-            <img
-              src={imagemSoulie}
-              alt="Soulie sorrindo com os braços cruzados"
-              className="relative w-40 drop-shadow-[0_20px_30px_rgba(109,40,217,0.2)] sm:w-44 lg:w-48"
-            />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              poster={imagemSoulie}
+              aria-label="Animação da Soulie convidando o usuário a participar da jornada"
+              className="relative w-72 object-contain mix-blend-multiply sm:w-96 lg:w-md"
+            >
+              <source src={animacaoSoulie} type="video/mp4" />
+              Seu navegador não suporta a reprodução deste vídeo.
+            </video>
           </div>
         </div>
 

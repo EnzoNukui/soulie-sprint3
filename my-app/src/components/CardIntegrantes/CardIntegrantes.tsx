@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface CardIntegranteProps {
   nome: string;
   rm: string;
@@ -8,6 +10,7 @@ interface CardIntegranteProps {
   espelharAvatar: boolean;
   linkedin: string;
   github: string;
+  perfil?: string;
   destaque?: boolean;
 }
 
@@ -21,6 +24,7 @@ export default function CardIntegrante({
   espelharAvatar,
   linkedin,
   github,
+  perfil,
   destaque = false,
 }: CardIntegranteProps) {
   return (
@@ -47,6 +51,16 @@ export default function CardIntegrante({
       />
 
       <h2 className="mt-6 max-w-sm text-2xl font-bold leading-tight text-violet-950">{nome}</h2>
+
+      {perfil && (
+        <Link
+          to={perfil}
+          className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-violet-600 transition-colors hover:text-violet-800 focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600"
+        >
+          Ver perfil
+          <span aria-hidden="true">→</span>
+        </Link>
+      )}
 
       <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
         <span className="rounded-full bg-violet-100 px-4 py-2 text-sm font-semibold text-violet-700">

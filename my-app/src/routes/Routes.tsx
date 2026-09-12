@@ -31,6 +31,10 @@ const router = createBrowserRouter([
         element: <Integrantes />,
       },
       {
+        path: "/integrantes/:rm",
+        element: <Integrantes />,
+      },
+      {
         path: "/contato",
         element: <Contato />,
       },

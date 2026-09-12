@@ -11,7 +11,7 @@ export default function App() {
   }, [pathname])
 
   return (
-    <div className="flex min-h-screen flex-col bg-violet-50/30 text-zinc-900">
+    <div className="flex min-h-screen flex-col bg-violet-50/30 pt-20 text-zinc-900">
       <Cabecalho />
       <Outlet />
       <Rodape />
