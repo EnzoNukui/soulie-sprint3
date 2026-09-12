@@ -196,3 +196,31 @@ Conheça os desenvolvedores responsáveis pela idealização e desenvolvimento d
     </tr>
   </tbody>
 </table>
+
+## 🚀 Como Usar
+
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/EnzoNukui/soulie-sprint3.git
+```
+
+### 2. Acessar a pasta do projeto
+
+```bash
+cd soulie-sprint3/my-app
+```
+
+### 3. Instalar as dependências
+
+```bash
+npm install
+```
+
+### 4. Rodar em ambiente de desenvolvimento
+
+```bash
+npm run dev
+```
+
+Após rodar o comando, acesse o endereço exibido no terminal para visualizar o projeto no navegador.
