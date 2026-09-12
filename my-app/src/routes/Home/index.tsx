@@ -16,6 +16,7 @@ import avatarRadiante from '../../assets/avatar/expressoes/avatar_radiante.png'
 import avatarSorridente from '../../assets/avatar/expressoes/avatar_sorridente.png'
 import avatarTimido from '../../assets/avatar/expressoes/avatar_timido.png'
 import imagemSoulie from '../../assets/avatar/imagem_soulie.png'
+import animacaoSoulie from '../../assets/avatar/soulie-animacao.mp4'
 import printPrototipo from '../../assets/produto/apresentacao/prototipo-soul-up.png'
 
 const linkMvp = 'https://soulieprototipo.vercel.app/jornada/encontro'
@@ -448,11 +449,19 @@ export default function Home() {
               aria-hidden="true"
               className="absolute -right-8 top-24 h-4 w-4 fill-violet-200 text-violet-200 sm:-right-14 sm:h-5 sm:w-5"
             />
-            <img
-              src={imagemSoulie}
-              alt="Soulie sorrindo com os braços cruzados"
-              className="relative w-40 drop-shadow-[0_20px_30px_rgba(109,40,217,0.2)] sm:w-44 lg:w-48"
-            />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              poster={imagemSoulie}
+              aria-label="Animação da Soulie convidando o usuário a participar da jornada"
+              className="relative w-72 object-contain mix-blend-multiply sm:w-96 lg:w-md"
+            >
+              <source src={animacaoSoulie} type="video/mp4" />
+              Seu navegador não suporta a reprodução deste vídeo.
+            </video>
           </div>
         </div>
 
