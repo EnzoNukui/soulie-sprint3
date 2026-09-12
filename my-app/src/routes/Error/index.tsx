@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Botao from '../../components/Botoes/Botoes'
 import Cabecalho from '../../components/Cabecalho/Cabecalho'
 import Rodape from '../../components/Rodape/Rodape'
-import avatarDuvida from '../../assets/avatar/avatar_duvida.png'
+import avatarDuvida from '../../assets/avatar/expressoes/avatar_duvida.png'
 
 export default function ErrorPage() {
   const navigate = useNavigate()
@@ -46,4 +46,3 @@ export default function ErrorPage() {
     </div>
   )
 }
-

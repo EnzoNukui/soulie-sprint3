@@ -10,13 +10,13 @@ import {
   UsersRound,
 } from 'lucide-react'
 import Botao from '../../components/Botoes/Botoes'
-import avatarComPressa from '../../assets/avatar/avatar_com_pressa.png'
-import avatarFeliz from '../../assets/avatar/avatar_feliz.png'
-import avatarRadiante from '../../assets/avatar/avatar_radiante.png'
-import avatarSorridente from '../../assets/avatar/avatar_sorridente.png'
-import avatarTimido from '../../assets/avatar/avatar_timido.png'
+import avatarComPressa from '../../assets/avatar/expressoes/avatar_com_pressa.png'
+import avatarFeliz from '../../assets/avatar/expressoes/avatar_feliz.png'
+import avatarRadiante from '../../assets/avatar/expressoes/avatar_radiante.png'
+import avatarSorridente from '../../assets/avatar/expressoes/avatar_sorridente.png'
+import avatarTimido from '../../assets/avatar/expressoes/avatar_timido.png'
 import imagemSoulie from '../../assets/avatar/imagem_soulie.png'
-import printPrototipo from '../../assets/produto/prototipo-soul-up.png'
+import printPrototipo from '../../assets/produto/apresentacao/prototipo-soul-up.png'
 
 const linkMvp = 'https://soulieprototipo.vercel.app/jornada/encontro'
 
@@ -120,9 +120,10 @@ export default function Home() {
   const corDestaque = interpolarCor([245, 243, 255], [46, 16, 101], progressoCor)
   const saidaMvp = limitar((progressoDestaque - 0.34) / 0.22, 0, 1)
   const entradaSobre = limitar((progressoDestaque - 0.46) / 0.24, 0, 1)
+  const mostrarSobre = entradaSobre >= 0.5
 
   return (
-    <div className="overflow-x-clip bg-white">
+    <main className="overflow-x-clip bg-white">
       <section className="relative">
         <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 py-20 sm:py-24 lg:grid-cols-2 lg:px-8 lg:py-28">
           <div className="relative z-10 text-center lg:text-left">
@@ -329,11 +330,12 @@ export default function Home() {
           style={{ backgroundColor: corDestaque }}
         >
           <div
-            aria-hidden={progressoDestaque > 0.62}
+            aria-hidden={mostrarSobre}
+            inert={mostrarSobre}
             className="absolute inset-0 flex items-center px-5 py-12 transition-opacity duration-200 motion-reduce:transition-none lg:px-8"
             style={{
               opacity: 1 - saidaMvp,
-              pointerEvents: saidaMvp > 0.75 ? 'none' : 'auto',
+              pointerEvents: mostrarSobre ? 'none' : 'auto',
               transform: `translate3d(0, ${-saidaMvp * 36}px, 0)`,
             }}
           >
@@ -372,11 +374,12 @@ export default function Home() {
           </div>
 
           <div
-            aria-hidden={progressoDestaque < 0.38}
+            aria-hidden={!mostrarSobre}
+            inert={!mostrarSobre}
             className="absolute inset-0 flex items-center px-5 py-12 text-white transition-opacity duration-200 motion-reduce:transition-none lg:px-8"
             style={{
               opacity: entradaSobre,
-              pointerEvents: entradaSobre < 0.7 ? 'none' : 'auto',
+              pointerEvents: mostrarSobre ? 'auto' : 'none',
               transform: `translate3d(0, ${(1 - entradaSobre) * 42}px, 0)`,
             }}
           >
@@ -458,6 +461,6 @@ export default function Home() {
           className="absolute -bottom-14 left-1/2 h-20 w-[115%] -translate-x-1/2 rounded-t-[50%] border-t-2 border-violet-200/70 bg-violet-50/50"
         />
       </section>
-    </div>
+    </main>
   )
 }

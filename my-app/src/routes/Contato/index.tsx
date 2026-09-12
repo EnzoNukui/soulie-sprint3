@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import Botao from "../../components/Botoes/Botoes";
+import Conteudo from "../../components/Conteudo/Conteudo";
 
 interface FormularioContato {
   email: string;
@@ -31,16 +32,13 @@ export default function Contato() {
   };
 
   return (
-    <main className="bg-white px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
-      <section className="mx-auto w-full max-w-6xl" aria-labelledby="titulo-contato">
-        <h1
-          id="titulo-contato"
-          className="text-center text-4xl font-bold tracking-tight text-violet-950 sm:text-5xl lg:text-6xl"
-        >
-          Como podemos <span className="text-violet-600">ajudar?</span>
-        </h1>
-
-        <div className="mt-12 overflow-hidden rounded-3xl border border-violet-200 bg-white sm:mt-16 lg:grid lg:grid-cols-[0.8fr_1.4fr]">
+    <main className="bg-white">
+      <Conteudo
+        titulo={<>Como podemos <span className="text-violet-600">ajudar?</span></>}
+        centralizado
+        idTitulo="titulo-contato"
+      >
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-violet-200 bg-white lg:grid lg:grid-cols-[0.8fr_1.4fr]">
           <div className="border-b border-violet-200 bg-violet-50/50 px-6 py-8 sm:px-9 sm:py-10 lg:border-r lg:border-b-0 lg:px-10 lg:py-12">
             <h2 className="text-2xl font-bold text-violet-950 sm:text-3xl">
               Descreva o problema
@@ -215,7 +213,7 @@ export default function Contato() {
             )}
           </form>
         </div>
-      </section>
+      </Conteudo>
     </main>
   );
 }

@@ -34,6 +34,7 @@ export default function Menu({ variante, aoNavegar }: MenuProps) {
             <NavLink
               key={link.caminho}
               to={link.caminho}
+              end={link.caminho === '/'}
               className={estiloLink}
               onClick={aoNavegar}
             >
@@ -51,7 +52,12 @@ export default function Menu({ variante, aoNavegar }: MenuProps) {
       className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex"
     >
       {links.map((link) => (
-        <NavLink key={link.caminho} to={link.caminho} className={estiloLink}>
+        <NavLink
+          key={link.caminho}
+          to={link.caminho}
+          end={link.caminho === '/'}
+          className={estiloLink}
+        >
           {link.nome}
         </NavLink>
       ))}

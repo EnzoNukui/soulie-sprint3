@@ -9,11 +9,14 @@ import {
 } from 'lucide-react'
 import Botao from '../../components/Botoes/Botoes'
 import Card from '../../components/Cards/Cards'
-import avatarFeliz from '../../assets/avatar/avatar_feliz.png'
-import avatarRadiante from '../../assets/avatar/avatar_radiante.png'
-import avatarTimido from '../../assets/avatar/avatar_timido.png'
-import avatarPortalCta from '../../assets/produto/avatar-portal-cta.png'
-import printPrototipo from '../../assets/produto/prototipo-soul-up.png'
+import avatarFeliz from '../../assets/avatar/expressoes/avatar_feliz.png'
+import avatarRadiante from '../../assets/avatar/expressoes/avatar_radiante.png'
+import avatarTimido from '../../assets/avatar/expressoes/avatar_timido.png'
+import avatarPortalCta from '../../assets/produto/apresentacao/avatar-portal-cta.png'
+import imagemComunidade from '../../assets/produto/cards/comunidade-sustentavel.webp'
+import imagemMissao from '../../assets/produto/cards/missao-sustentavel.webp'
+import imagemProgresso from '../../assets/produto/cards/progresso-sustentavel.webp'
+import printPrototipo from '../../assets/produto/apresentacao/prototipo-soul-up.png'
 
 const linkMvp = 'https://soulieprototipo.vercel.app/jornada/encontro'
 
@@ -78,12 +81,9 @@ const fases = [
 ]
 
 const imagensCards = {
-  acao:
-    'https://images.unsplash.com/photo-1755544624610-30db0fd65109?auto=format&fit=crop&w=1200&q=85',
-  comunidade:
-    'https://images.unsplash.com/photo-1611843467160-25afb8df1074?auto=format&fit=crop&w=1200&q=85',
-  impacto:
-    'https://images.unsplash.com/photo-1771172195332-3bc9ded9f3b5?auto=format&fit=crop&w=1200&q=85',
+  acao: imagemMissao,
+  comunidade: imagemComunidade,
+  impacto: imagemProgresso,
 }
 
 const limitar = (valor: number, minimo: number, maximo: number) =>
@@ -164,7 +164,7 @@ export default function Solucao() {
   const corFundoFases = calcularCorFases(progressoFases)
 
   return (
-    <div className="overflow-x-clip bg-[#fbfaf7]">
+    <main className="overflow-x-clip bg-[#fbfaf7]">
       <section className="relative overflow-hidden border-b border-violet-100">
         <div aria-hidden="true" className="absolute -left-40 -top-40 h-96 w-96 rounded-full bg-violet-100/60 blur-3xl" />
         <div aria-hidden="true" className="absolute -bottom-48 right-0 h-112 w-112 rounded-full bg-emerald-50 blur-3xl" />
@@ -357,6 +357,6 @@ export default function Solucao() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   )
 }

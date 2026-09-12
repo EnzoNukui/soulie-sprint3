@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import avatarDuvida from "../../assets/avatar/avatar_duvida.png";
+import avatarDuvida from "../../assets/avatar/expressoes/avatar_duvida.png";
 import Botao from "../../components/Botoes/Botoes";
 
 const perguntas = [

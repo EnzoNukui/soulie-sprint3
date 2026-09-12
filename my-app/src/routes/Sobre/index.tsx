@@ -2,20 +2,20 @@ import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { BellRing, Gift, MessageCircleMore } from 'lucide-react'
 import Botao from '../../components/Botoes/Botoes'
-import avatarCta from '../../assets/avatar/avatar_cta.png'
-import avatarBravo from '../../assets/avatar/avatar_bravo.png'
-import avatarComPressa from '../../assets/avatar/avatar_com_pressa.png'
-import avatarEntediado from '../../assets/avatar/avatar_entediado.png'
-import avatarFeliz from '../../assets/avatar/avatar_feliz.png'
-import avatarRadiante from '../../assets/avatar/avatar_radiante.png'
-import avatarSorridente from '../../assets/avatar/avatar_sorridente.png'
-import avatarTimido from '../../assets/avatar/avatar_timido.png'
-import avatarTriste from '../../assets/avatar/avatar_triste.png'
+import avatarCta from '../../assets/avatar/expressoes/avatar_cta.png'
+import avatarBravo from '../../assets/avatar/expressoes/avatar_bravo.png'
+import avatarComPressa from '../../assets/avatar/expressoes/avatar_com_pressa.png'
+import avatarEntediado from '../../assets/avatar/expressoes/avatar_entediado.png'
+import avatarFeliz from '../../assets/avatar/expressoes/avatar_feliz.png'
+import avatarRadiante from '../../assets/avatar/expressoes/avatar_radiante.png'
+import avatarSorridente from '../../assets/avatar/expressoes/avatar_sorridente.png'
+import avatarTimido from '../../assets/avatar/expressoes/avatar_timido.png'
+import avatarTriste from '../../assets/avatar/expressoes/avatar_triste.png'
 import imagemSoulie from '../../assets/avatar/imagem_soulie.png'
-import soulie01 from '../../assets/avatar/soulie01.png'
-import soulie02 from '../../assets/avatar/soulie02.png'
-import soulie03 from '../../assets/avatar/soulie03.png'
-import soulie04 from '../../assets/avatar/soulie04.png'
+import soulie01 from '../../assets/avatar/historia/soulie01.png'
+import soulie02 from '../../assets/avatar/historia/soulie02.png'
+import soulie03 from '../../assets/avatar/historia/soulie03.png'
+import soulie04 from '../../assets/avatar/historia/soulie04.png'
 
 const etapas = [
   { numero: '01', titulo: 'Inspiração', descricao: 'A curiosidade foi o ponto de partida para aproximar sustentabilidade e rotina.', imagem: soulie01, alt: 'Primeira inspiração visual para a Soulie' },
@@ -143,7 +143,7 @@ export default function Sobre() {
   }, [])
 
   return (
-    <div ref={paginaRef} className="overflow-x-clip bg-white">
+    <main ref={paginaRef} className="overflow-x-clip bg-white">
       <section ref={heroRef} className="relative min-h-[calc(100vh-5rem)] overflow-hidden bg-[#fefeff]">
         <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-376 flex-col justify-center px-5 py-20 sm:px-8 lg:px-12">
           <p className="relative z-20 mb-10 text-center text-xs font-bold uppercase tracking-[0.3em] text-violet-600 sm:mb-14">Sobre a Soulie</p>
@@ -314,6 +314,6 @@ export default function Sobre() {
 
         <div aria-hidden="true" className="relative z-30 h-5 bg-linear-to-r from-violet-950 via-violet-900 to-indigo-950" />
       </section>
-    </div>
+    </main>
   )
 }
