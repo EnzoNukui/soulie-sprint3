@@ -290,7 +290,7 @@ export default function Solucao() {
               </h2>
             </div>
             <p className="max-w-md text-base leading-7 text-zinc-600">
-              Ações reais, pessoas próximas e resultados que mostram que continuar vale a pena.
+              Ações reais, conexões inteligentes e resultados que transformam a experiência.
             </p>
           </div>
 
