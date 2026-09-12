@@ -321,8 +321,8 @@ export default function Sobre() {
             </div>
           </div>
 
-          <div className="relative z-20 mx-auto mt-10 h-44 max-w-xl overflow-hidden sm:mt-12 sm:h-52">
-            <img src={avatarCta} alt="Soulie sorridente aparecendo por trás do rodapé" className="absolute left-1/2 top-0 w-64 -translate-x-1/2 drop-shadow-[0_20px_28px_rgba(109,40,217,0.22)] sm:w-72" />
+          <div className="relative z-20 mx-auto mt-10 flex max-w-xl justify-center px-5 pb-10 sm:mt-12 sm:pb-12">
+            <img src={avatarCta} alt="Soulie sorridente celebrando o próximo capítulo" className="w-52 object-contain drop-shadow-[0_20px_28px_rgba(109,40,217,0.22)] sm:w-64 lg:w-72" />
           </div>
         </div>
 
