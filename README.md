@@ -80,12 +80,13 @@ O Soulie utiliza um avatar animado com diferentes expressões faciais para refor
 
 Além do avatar principal, o projeto também conta com ilustrações complementares do Soulie (acenando, apontando, espiando, em pose positiva) utilizadas na página de Integrantes, reforçando a identidade visual e o tom lúdico do produto.
 
-## Evolução Visual do Site e Sobre as páginas
-## 📸 Evolução Visual do Site — Antes e Depois
+## 📸 Páginas do Site e Evolução Visual
 
-Como o Soulie já vinha sendo desenvolvido em sprints anteriores, esta seção compara o visual anterior de cada página com a nova versão, evidenciando a evolução do projeto ao longo do desenvolvimento.
+Esta seção apresenta as principais páginas do Soulie, seu propósito dentro da experiência do usuário, e a evolução visual de cada uma em relação à versão anterior do projeto.
 
 ### 🏠 Página Home
+
+A página inicial apresenta o posicionamento central da Soulie: "Pequenas ações. Impacto que continua." — reforçando a proposta de transformar hábitos sustentáveis em missões, progresso e recompensas.
 
 | Antes | Depois |
 | :---: | :---: |
@@ -93,17 +94,31 @@ Como o Soulie já vinha sendo desenvolvido em sprints anteriores, esta seção c
 
 ### 🛰️ Página Sobre
 
+A página Sobre conta a origem da Soulie — inspirada no personagem "22" do filme Soul — e como ela atua como assistente virtual da SoulUp, guiando os usuários em práticas ambientais de forma fluida e engajadora.
+
 | Antes | Depois |
 | :---: | :---: |
 | <img src="./my-app/src/assets/produto/sobre-antigo.png" alt="Sobre antiga do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/sobre-novo.png" alt="Sobre nova do Soulie" width="100%"> |
 
 ### ⚙️ Página Solução
 
+A página Solução detalha como a Soulie transforma sustentabilidade em hábito por meio de missões sociais, sistema de pontos e recompensas, com uma prévia da interface do aplicativo (carteira de pontos, comunidades e trilhas de missão).
+
 | Antes | Depois |
 | :---: | :---: |
 | <img src="./my-app/src/assets/produto/solucao-antigo.png" alt="Solução antiga do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/solucao-novo.png" alt="Solução nova do Soulie" width="100%"> |
 
+### 👥 Página Integrantes
+
+A página Integrantes apresenta os cinco desenvolvedores responsáveis pelo projeto, com nome completo, RM, turma e links para GitHub e LinkedIn de cada um.
+
+| Antes | Depois |
+| :---: | :---: |
+| <img src="./my-app/src/assets/produto/integrantes-antigo.png" alt="Integrantes antiga do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/integrantes-novo.png" alt="Integrantes nova do Soulie" width="100%"> |
+
 ### ❓ Página FAQ
+
+A página FAQ reúne as principais dúvidas sobre a Soulie: sua relação com a SoulUp, frequência de notificações, retenção de uso e como o impacto do investimento é mensurado.
 
 | Antes | Depois |
 | :---: | :---: |
@@ -111,12 +126,9 @@ Como o Soulie já vinha sendo desenvolvido em sprints anteriores, esta seção c
 
 ### ✉️ Página Contato
 
+A página Contato disponibiliza um formulário para o usuário relatar problemas, tirar dúvidas ou dar sugestões de gamificação diretamente para a equipe.
+
 | Antes | Depois |
 | :---: | :---: |
 | <img src="./my-app/src/assets/produto/contato-antigo.png" alt="Contato antigo do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/contato-novo.png" alt="Contato novo do Soulie" width="100%"> |
 
-### 👥 Página Integrantes
-
-| Antes | Depois |
-| :---: | :---: |
-| <img src="./my-app/src/assets/produto/integrantes-antigo.png" alt="Integrantes antiga do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/integrantes-novo.png" alt="Integrantes nova do Soulie" width="100%"> |
