@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link, Navigate, useParams } from "react-router-dom";
 import fotoArthur from "../../assets/integrantes/foto_arthur.png";
 import fotoDiego from "../../assets/integrantes/foto_diego.jpeg";
 import fotoEnzo from "../../assets/integrantes/foto_enzo.jpeg";
@@ -69,10 +70,58 @@ const integrantes = [
   },
 ];
 
+const obterNumeroRm = (rm: string) => rm.replace(/\D/g, "");
+
 export default function Integrantes() {
+  const { rm } = useParams<{ rm?: string }>();
+  const integranteSelecionado = rm
+    ? integrantes.find((integrante) => obterNumeroRm(integrante.rm) === rm)
+    : undefined;
+
   useEffect(() => {
-    document.title = "Soulie | Integrantes";
-  }, []);
+    document.title = integranteSelecionado
+      ? `Soulie | ${integranteSelecionado.nome}`
+      : "Soulie | Integrantes";
+  }, [integranteSelecionado]);
+
+  if (rm && !integranteSelecionado) {
+    return <Navigate to="/integrantes" replace />;
+  }
+
+  if (integranteSelecionado) {
+    return (
+      <main className="overflow-hidden bg-white px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+        <section className="mx-auto w-full max-w-5xl" aria-labelledby="titulo-perfil-integrante">
+          <Link
+            to="/integrantes"
+            className="inline-flex items-center gap-2 text-sm font-bold text-violet-600 transition-colors hover:text-violet-800 focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600"
+          >
+            <span aria-hidden="true">←</span>
+            Voltar para integrantes
+          </Link>
+
+          <header className="mx-auto mt-10 max-w-3xl text-center">
+            <p className="text-sm font-bold uppercase tracking-widest text-violet-600">
+              Perfil do integrante
+            </p>
+            <h1
+              id="titulo-perfil-integrante"
+              className="mt-3 text-4xl font-bold tracking-tight text-violet-950 sm:text-5xl lg:text-6xl"
+            >
+              {integranteSelecionado.nome}
+            </h1>
+            <p className="mt-5 text-base leading-7 text-zinc-600 sm:text-lg">
+              Conheça os dados acadêmicos e os canais profissionais deste integrante da Soulie.
+            </p>
+          </header>
+
+          <div className="mx-auto mt-14 max-w-2xl">
+            <CardIntegrante {...integranteSelecionado} destaque />
+          </div>
+        </section>
+      </main>
+    );
+  }
 
   return (
     <main className="overflow-hidden bg-white px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
@@ -94,6 +143,7 @@ export default function Integrantes() {
             <CardIntegrante
               key={integrante.rm}
               {...integrante}
+              perfil={`/integrantes/${obterNumeroRm(integrante.rm)}`}
               destaque={indice === integrantes.length - 1}
             />
           ))}
