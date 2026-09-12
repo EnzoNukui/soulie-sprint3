@@ -191,7 +191,7 @@ export default function Sobre() {
             </ol>
           </div>
 
-          <div ref={trajetoriaRef} className="relative mx-auto mt-24 hidden h-[1200px] max-w-6xl md:block">
+          <div ref={trajetoriaRef} className="relative mx-auto mt-24 hidden h-300 max-w-6xl md:block">
             <svg aria-hidden="true" viewBox="0 0 1000 1300" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
               <path d="M500 0 C670 38 670 90 500 130 C330 170 330 330 500 370 C670 410 670 570 500 610 C330 650 330 810 500 850 C670 890 670 1050 500 1090 C410 1112 410 1190 500 1300" fill="none" stroke="rgb(221 214 254)" strokeWidth="3" strokeLinecap="round" />
               <path ref={caminhoRef} pathLength="1" d="M500 0 C670 38 670 90 500 130 C330 170 330 330 500 370 C670 410 670 570 500 610 C330 650 330 810 500 850 C670 890 670 1050 500 1090 C410 1112 410 1190 500 1300" fill="none" stroke="rgb(139 92 246)" strokeWidth="5" strokeLinecap="round" strokeDasharray="1" strokeDashoffset="1" />
