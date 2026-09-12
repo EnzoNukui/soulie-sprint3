@@ -420,6 +420,44 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="relative overflow-hidden border-t border-violet-100 bg-white">
+        <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-5 pb-14 pt-20 text-center sm:px-8 sm:pb-16 sm:pt-24">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-violet-600">
+            Sua jornada continua
+          </p>
+          <h2 className="mt-4 max-w-4xl text-4xl font-black tracking-[-0.04em] text-violet-950 sm:text-5xl lg:text-6xl">
+            Quer fazer parte dessa jornada?
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-violet-950/70 sm:text-lg">
+            Converse com a gente e conheça melhor a proposta da Soulie.
+          </p>
+          <div className="mt-8 flex justify-center">
+            <Botao texto="Fale com a gente" onClick={() => navigate('/contato')} />
+          </div>
+
+          <div className="relative mt-10 flex justify-center">
+            <Star
+              aria-hidden="true"
+              className="absolute -left-10 top-10 h-5 w-5 fill-violet-300 text-violet-300 sm:-left-16 sm:h-6 sm:w-6"
+            />
+            <Star
+              aria-hidden="true"
+              className="absolute -right-8 top-24 h-4 w-4 fill-violet-200 text-violet-200 sm:-right-14 sm:h-5 sm:w-5"
+            />
+            <img
+              src={imagemSoulie}
+              alt="Soulie sorrindo com os braços cruzados"
+              className="relative w-40 drop-shadow-[0_20px_30px_rgba(109,40,217,0.2)] sm:w-44 lg:w-48"
+            />
+          </div>
+        </div>
+
+        <div
+          aria-hidden="true"
+          className="absolute -bottom-14 left-1/2 h-20 w-[115%] -translate-x-1/2 rounded-t-[50%] border-t-2 border-violet-200/70 bg-violet-50/50"
+        />
+      </section>
     </div>
   )
 }
