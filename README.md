@@ -1,5 +1,10 @@
 # Soulie — Sua IA inteligente que irá te acompanhar na SoulUp 🌱
 
+## 🔗 Links do Projeto
+
+- **Repositório GitHub:** [https://github.com/EnzoNukui/soulie-sprint3](https://github.com/EnzoNukui/soulie-sprint3)
+- **Vídeo de Apresentação (YouTube):** []
+
 ## 📌 Descrição do Projeto
 
 A **Soulie** se trata de uma IA inteligente sebdo a solução desenvolvida para o Challenge de 2026 junto  da empresa **SoulUp**,   sendo criada para solucionar um dos maiores problemas de plataformas de engajamento dentro do aplicativo: a **queda de retenção de usuários**.
