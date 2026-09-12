@@ -80,3 +80,43 @@ O Soulie utiliza um avatar animado com diferentes expressões faciais para refor
 
 Além do avatar principal, o projeto também conta com ilustrações complementares do Soulie (acenando, apontando, espiando, em pose positiva) utilizadas na página de Integrantes, reforçando a identidade visual e o tom lúdico do produto.
 
+## Evolução Visual do Site e Sobre as páginas
+## 📸 Evolução Visual do Site — Antes e Depois
+
+Como o Soulie já vinha sendo desenvolvido em sprints anteriores, esta seção compara o visual anterior de cada página com a nova versão, evidenciando a evolução do projeto ao longo do desenvolvimento.
+
+### 🏠 Página Home
+
+| Antes | Depois |
+| :---: | :---: |
+| <img src="./my-app/src/assets/produto/home-antigo.png" alt="Home antiga do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/home-novo.png" alt="Home nova do Soulie" width="100%"> |
+
+### 🛰️ Página Sobre
+
+| Antes | Depois |
+| :---: | :---: |
+| <img src="./my-app/src/assets/produto/sobre-antigo.png" alt="Sobre antiga do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/sobre-novo.png" alt="Sobre nova do Soulie" width="100%"> |
+
+### ⚙️ Página Solução
+
+| Antes | Depois |
+| :---: | :---: |
+| <img src="./my-app/src/assets/produto/solucao-antigo.png" alt="Solução antiga do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/solucao-novo.png" alt="Solução nova do Soulie" width="100%"> |
+
+### ❓ Página FAQ
+
+| Antes | Depois |
+| :---: | :---: |
+| <img src="./my-app/src/assets/produto/faq-antigo.png" alt="FAQ antigo do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/faq-novo.png" alt="FAQ novo do Soulie" width="100%"> |
+
+### ✉️ Página Contato
+
+| Antes | Depois |
+| :---: | :---: |
+| <img src="./my-app/src/assets/produto/contato-antigo.png" alt="Contato antigo do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/contato-novo.png" alt="Contato novo do Soulie" width="100%"> |
+
+### 👥 Página Integrantes
+
+| Antes | Depois |
+| :---: | :---: |
+| <img src="./my-app/src/assets/produto/integrantes-antigo.png" alt="Integrantes antiga do Soulie" width="100%"> | <img src="./my-app/src/assets/produto/integrantes-novo.png" alt="Integrantes nova do Soulie" width="100%"> |
