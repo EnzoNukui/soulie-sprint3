@@ -171,7 +171,7 @@ export default function Home() {
           <div className="order-1 lg:order-2">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-violet-600">O desafio</p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-zinc-950 sm:text-5xl">
-              Entrar é fácil. Querer voltar é o que importa.
+              O usuário entra uma vez. Mas voltar não deveria ser difícil.
             </h2>
             <p className="mt-5 text-base leading-7 text-zinc-600">
               A Soulie transforma intenção em uma rotina que vale a pena continuar.
