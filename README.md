@@ -3,7 +3,7 @@
 ## 🔗 Links do Projeto
 
 - **Repositório GitHub:** [https://github.com/EnzoNukui/soulie-sprint3](https://github.com/EnzoNukui/soulie-sprint3)
-- **Vídeo de Apresentação (YouTube):** []
+- **Vídeo de Apresentação (YouTube):** [https://youtu.be/nqB3IUTKXAY?si=EOsZCH2BwNNibNlt]
 - **Link para o site da Soulie** [https://soulieprototipo.vercel.app/]
 
 
@@ -158,7 +158,7 @@ Conheça os desenvolvedores responsáveis pela idealização e desenvolvimento d
   </thead>
   <tbody>
     <tr>
-      <td><img src="./my-app/src/assets/integrantes/foto_arthur.png" width="60"></td>
+      <td><img src="./my-app/src/assets/integrantes/foto_arthur.png" width="60" height="60" style="object-fit: cover; border-radius: 8px;"></td>
       <td>Arthur Carvalho Brito Martins</td>
       <td>RM 572325</td>
       <td>1TDSPH</td>
@@ -166,7 +166,7 @@ Conheça os desenvolvedores responsáveis pela idealização e desenvolvimento d
       <td><a href="https://github.com/arthurmartinss">GitHub</a></td>
     </tr>
     <tr>
-      <td><img src="./my-app/src/assets/integrantes/foto_diego.jpeg" width="60"></td>
+      <td><img src="./my-app/src/assets/integrantes/foto_diego.jpeg" width="60" height="60" style="object-fit: cover; border-radius: 8px;"></td>
       <td>Diego Soares Trujillo</td>
       <td>RM 570147</td>
       <td>1TDSPH</td>
@@ -174,7 +174,7 @@ Conheça os desenvolvedores responsáveis pela idealização e desenvolvimento d
       <td><a href="https://github.com/diegotrujillo011">GitHub</a></td>
     </tr>
     <tr>
-      <td><img src="./my-app/src/assets/integrantes/foto_enzo.jpeg" width="60"></td>
+      <td><img src="./my-app/src/assets/integrantes/foto_enzo.jpeg" width="60" height="60" style="object-fit: cover; border-radius: 8px;"></td>
       <td>Enzo Nukui da Silva</td>
       <td>RM 569770</td>
       <td>1TDSPH</td>
@@ -182,7 +182,7 @@ Conheça os desenvolvedores responsáveis pela idealização e desenvolvimento d
       <td><a href="https://github.com/EnzoNukui">GitHub</a></td>
     </tr>
     <tr>
-      <td><img src="./my-app/src/assets/integrantes/foto_leticia_cardoso.jpeg" width="60"></td>
+      <td><img src="./my-app/src/assets/integrantes/foto_leticia_cardoso.jpeg" width="60" height="60" style="object-fit: cover; border-radius: 8px;"></td>
       <td>Leticia Cardoso de Almeida</td>
       <td>RM 569415</td>
       <td>1TDSPH</td>
@@ -190,7 +190,7 @@ Conheça os desenvolvedores responsáveis pela idealização e desenvolvimento d
       <td><a href="https://github.com/lehalmeidafc0">GitHub</a></td>
     </tr>
     <tr>
-      <td><img src="./my-app/src/assets/integrantes/foto_leticia_dias.jpeg" width="60"></td>
+      <td><img src="./my-app/src/assets/integrantes/foto_leticia_dias.jpeg" width="60" height="60" style="object-fit: cover; border-radius: 8px;"></td>
       <td>Leticia Dias Araujo Felix Moratori</td>
       <td>RM 569138</td>
       <td>1TDSPH</td>
