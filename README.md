@@ -19,3 +19,44 @@ Nesta etapa (Sprint 03), o front-end foi desenvolvido em **React + Vite + TypeSc
 - **React Router DOM** — navegação entre páginas (SPA)
 - **React Hook Form** — validação de formulários
 - **Git & GitHub** — versionamento e colaboração entre os integrantes
+
+
+## 📁 Estrutura de Pastas do Projeto
+
+A arquitetura do repositório foi organizada para separar componentes, páginas, rotas e recursos visuais, facilitando a manutenção e a escalabilidade da aplicação.
+
+soulie-sprint3/
+├── my-app/
+│   ├── public/
+│   │   └── favicon/
+│   │       └── soulie_favicon.svg
+│   ├── src/
+│   │   ├── assets/
+│   │   │   ├── avatar/             # expressões do avatar (feliz, bravo, triste, radiante, tímido...)
+│   │   │   ├── avatar_integrantes/ # ilustrações do Soulie usadas na página de integrantes
+│   │   │   ├── integrantes/        # fotos dos membros do grupo
+│   │   │   └── produto/            # imagens do protótipo e conceito do produto
+│   │   ├── components/
+│   │   │   ├── Botoes/
+│   │   │   ├── Cabecalho/
+│   │   │   ├── CardIntegrantes/
+│   │   │   ├── Cards/
+│   │   │   ├── Conteudo/
+│   │   │   └── Rodape/
+│   │   ├── pages/
+│   │   │   ├── Home/
+│   │   │   ├── Sobre/
+│   │   │   ├── Solucao/
+│   │   │   ├── Faq/
+│   │   │   ├── Contato/
+│   │   │   ├── Integrantes/
+│   │   │   └── Error/
+│   │   ├── routes/
+│   │   │   └── Routes.tsx
+│   │   ├── App.tsx
+│   │   ├── globals.css
+│   │   └── main.tsx
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.ts
+└── README.md
