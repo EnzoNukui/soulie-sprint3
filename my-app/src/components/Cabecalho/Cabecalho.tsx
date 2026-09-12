@@ -27,7 +27,7 @@ export default function Cabecalho() {
       <div className="relative mx-auto flex h-20 max-w-7xl items-center px-5 sm:px-6 lg:px-8">
         <NavLink
           to="/"
-          className="absolute left-1/2 -translate-x-1/2 text-2xl font-semibold tracking-tight text-violet-600 lg:left-8 lg:translate-x-0"
+          className="absolute left-1/2 -translate-x-1/2 text-2xl font-semibold tracking-tight text-violet-600 min-[992px]:left-8 min-[992px]:translate-x-0"
           onClick={() => setRotaMenuAberto(null)}
         >
           Soulie
@@ -38,7 +38,7 @@ export default function Cabecalho() {
         <button
           ref={botaoMenuRef}
           type="button"
-          className="ml-auto flex h-11 w-11 items-center justify-center rounded-xl border border-zinc-200 text-zinc-900 transition-colors hover:border-violet-200 hover:bg-violet-50 hover:text-violet-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 lg:hidden"
+          className="ml-auto flex h-11 w-11 items-center justify-center rounded-xl border border-zinc-200 text-zinc-900 transition-colors hover:border-violet-200 hover:bg-violet-50 hover:text-violet-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 min-[992px]:hidden"
           aria-expanded={menuAberto}
           aria-controls="menu-principal"
           aria-label={menuAberto ? 'Fechar menu principal' : 'Abrir menu principal'}

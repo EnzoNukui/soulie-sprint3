@@ -27,7 +27,7 @@ export default function Menu({ variante, aoNavegar }: MenuProps) {
       <nav
         id="menu-principal"
         aria-label="Navegação principal"
-        className="mx-auto max-w-3xl rounded-b-3xl bg-white shadow-[0_18px_35px_-24px_rgba(24,24,27,0.4)] lg:hidden"
+        className="mx-auto max-w-3xl rounded-b-3xl bg-white shadow-[0_18px_35px_-24px_rgba(24,24,27,0.4)] min-[992px]:hidden"
       >
         <div className="flex flex-col items-center gap-3 border-t border-zinc-100 px-5 py-6">
           {links.map((link) => (
@@ -49,7 +49,7 @@ export default function Menu({ variante, aoNavegar }: MenuProps) {
   return (
     <nav
       aria-label="Navegação principal"
-      className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex"
+      className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 min-[992px]:flex"
     >
       {links.map((link) => (
         <NavLink
