@@ -4,6 +4,9 @@
 
 - **Repositório GitHub:** [https://github.com/EnzoNukui/soulie-sprint3](https://github.com/EnzoNukui/soulie-sprint3)
 - **Vídeo de Apresentação (YouTube):** []
+- **Link para o site da Soulie** [https://soulieprototipo.vercel.app/]
+
+
 
 ## 📌 Descrição do Projeto
 
