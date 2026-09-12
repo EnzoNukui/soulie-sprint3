@@ -10,6 +10,7 @@ Este repositório contém a entrega de **Front-end Design Engineering da Sprint 
 - **Aplicação publicada:** [soulie-sprint3.vercel.app](https://soulie-sprint3.vercel.app/)
 - **Vídeo de apresentação:** [assistir no YouTube](https://youtu.be/nqB3IUTKXAY?si=EOsZCH2BwNNibNlt)
 
+
 ## 📌 Sobre o projeto
 
 A **Soulie** é a solução desenvolvida para o Challenge 2026 em parceria com a **SoulUp**. A proposta busca reduzir a queda de retenção dos usuários por meio de uma experiência mais envolvente dentro da plataforma.
